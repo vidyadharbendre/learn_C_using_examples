@@ -2,7 +2,11 @@
    Author: Vidyadhar Bendre
    Email: vidyadhar.bendre@gmail.com
    Date: October 23, 2023
-   Description: We have declared an unsigned int variable named numberOfStudents, which represents the number of students in a classroom. When we use the %u format specifier in the printf statement, it tells the program to print an unsigned integer, matching the data type of the numberOfStudents variable. The output will display the number of students in the classroom as an unsigned integer..
+   Description: We have declared an unsigned int variable named numberOfStudents, which represents the number of students in a classroom. 
+   
+   When we use the %u format specifier in the printf statement, it tells the program to print an unsigned integer, matching the data type of the numberOfStudents variable. 
+   
+   The output will display the number of students in the classroom as an unsigned integer..
 */
 #include <stdio.h>
 

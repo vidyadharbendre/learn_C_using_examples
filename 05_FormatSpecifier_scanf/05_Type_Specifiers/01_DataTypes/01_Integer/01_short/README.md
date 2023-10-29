@@ -1,22 +1,13 @@
 # C Program: Short Integer Example (Temperature)
 
-This is a simple C program that demonstrates the use of a `short int` variable to represent the current temperature in degrees Celsius. It also includes a `printf` statement to display the temperature.
+This is a C program that demonstrates the use of a `short int` variable to represent the current temperature in degrees Celsius. The program incorporates both `printf` and `scanf` statements to display and accept temperature and `questionMark` values.
 
 ## Program Details
 
-- The program declares a `short int` variable named `temperature`.
-- A value of -5 is assigned to the `temperature` variable, representing the current temperature in Celsius.
-- The program uses the `printf` function to display a message along with the value of `temperature` & `questionMark`. It utilizes the `%hd` format specifier to indicate that the variable is a short integer.
-
-## Code Description
-
-The provided C program demonstrates the use of format specifiers in `printf` statements. Here's a breakdown of the code:
-
-1. In the first `printf` statement, the format specifier `%hd` is correctly used to print the `short int` variable `temperature`.
-
-2. In the second and third `printf` statements, both `%hd` and `%d` format specifiers are demonstrated for the `short` variable `questionMark`. While `%hd` is specific to `short` integers, `%d` is a more general specifier that can be used for both `short` and `int` types.
-
-3. In the fourth `printf` statement, the `%c` format specifier is used to print the `short` variable `questionMark` as a character. The result is the character represented by the ASCII code `-42`. It's important to note that this character may not be a visible character and may vary depending on the character encoding.
+- The program declares `short int` variables for `temperature` and `questionMark`.
+- The user is prompted to enter the current temperature in degrees Celsius and a value for `questionMark`.
+- The program uses the `scanf` function to accept these values from the user.
+- It then displays the accepted values with appropriate messages using `printf` statements. The `%hd` format specifier is used for `temperature` and `questionMark`, and the `%c` format specifier is used to display `questionMark` as a character.
 
 ## Running the Program
 
@@ -26,3 +17,8 @@ The provided C program demonstrates the use of format specifiers in `printf` sta
 
    ```bash
    gcc ShortIntTempertureInCelsius.c -o ShortIntTempertureInCelsius
+
+4. Run the compiled program
+   ```bash
+   ./ShortIntTempertureInCelsius
+

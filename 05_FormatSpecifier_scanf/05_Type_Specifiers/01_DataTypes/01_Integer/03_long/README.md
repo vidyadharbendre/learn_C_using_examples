@@ -1,5 +1,4 @@
-
-# C Program: Demonstrating the Use of `long` Data Type
+# C Program: Demonstrating Data Types, `scanf`, and `printf` with `long` Data Type
 
 - **Program Name**: longIntIndiaPopulation.c
 - **Author**: Vidyadhar Bendre
@@ -7,17 +6,20 @@
 
 ## Description
 
-In this example, we have declared a `long` variable named `indiaPopulation`, which represents the estimated population of India in the year 2023. When we use the `%ld` format specifier in the `printf` statement, it tells the program to print a `long` integer, matching the data type of the `indiaPopulation` variable. The output will display the population of India in 2023 as a `long` integer.
+This program serves as a practical example of how to work with data types in C, specifically focusing on the `long` data type. It declares three `long` variables to represent population figures and effectively demonstrates the use of data type specifiers, `scanf` for user input, and `printf` for output.
 
-### Scenario 1: India's Population
+In this program:
 
-- `indiaPopulationWithoutL` and `indiaPopulationWithL` demonstrate the use of `long` for India's population, one without and one with the `L` suffix.
+- 'indiaPopulationWithoutL' and 'indiaPopulationWithL' represent India's population, one without and one with the 'L' suffix.
+- 'populationOfStars' demonstrates the use of `long` integers for the estimated number of stars in a galaxy.
 
-### Scenario 2: Estimated Number of Stars
+This example showcases:
 
-- `populationOfStars` demonstrates the use of `long` with the `L` suffix for the estimated number of stars in a galaxy.
+1. The role of data types in variable declarations.
+2. Accepting user input using `scanf` with `%ld` data type specifiers.
+3. Displaying variables using `printf` with `%ld` data type specifiers.
 
-This example illustrates how to use `long` with and without the `L` suffix for different scenarios where the size of the integer literal and data type declaration matters.
+Learn how to work with data types effectively and see how user input and program output are managed in C.
 
 ## Running the Program
 
@@ -28,10 +30,9 @@ This example illustrates how to use `long` with and without the `L` suffix for d
    ```bash
    gcc longIntIndiaPopulation.c -o long_data_type
 
-
-1. Run the compiled program:
+4. Run the compiled program
 
    ```bash
-   ./longIntIndiaPopulation
+   ./LongIntIndiapopulation
 
-"The population of India in 2023 is 1,380,004,385" displayed in your terminal, representing India's population in the specified year.
+The program will prompt you to enter values for India's population and the estimated number of stars in a galaxy. Observe the proper use of data type specifiers, scanf, and printf to handle user input and display output effectively. This is a valuable exercise in understanding data types and input/output operations in C programming.

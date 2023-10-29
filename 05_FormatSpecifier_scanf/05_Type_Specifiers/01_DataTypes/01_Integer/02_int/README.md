@@ -1,12 +1,13 @@
-# C Program: Display Amount in Rupees
+# C Program: Input and Display Amount in Rupees
 
-This is a simple C program that demonstrates the use of an `int` variable to represent the total amount of money in rupees. It also includes a `printf` statement to display the amount with the rupee symbol (₹).
+This is a simple C program that demonstrates the use of an `int` variable to represent the total amount of money in rupees. It uses `scanf` to accept the total amount of money from the user and `printf` to display the entered value with the rupee symbol (₹).
 
 ## Program Details
 
 - The program declares an `int` variable named `totalMoney`.
-- A value of 1,000,000 is assigned to the `totalMoney` variable, representing the total amount of money in rupees.
-- The program uses the `printf` function to display a message along with the value of `totalMoney`. It utilizes the `\u` escape sequence followed by the Unicode code point (U+20B9) to represent the rupee symbol (₹) in the output.
+- It uses `printf` to display a message prompting the user to enter the total amount of money in the bank in rupees.
+- The program utilizes `scanf` to read the value entered by the user and store it in the `totalMoney` variable.
+- `printf` is used again to display the entered value along with the rupee symbol (₹) in the output.
 - The `%d` format specifier in the `printf` statement is used to print the `totalMoney` variable as an integer, matching its data type. As a result, the output will display the total amount of money in the bank as an integer, with the rupee symbol (₹) included.
 
 ## Running the Program
@@ -18,10 +19,8 @@ This is a simple C program that demonstrates the use of an `int` variable to rep
    ```bash
    gcc IntTotalMoney.c -o IntTotalMoney
 
-1. Run the compiled program:
+4. Run the compiled program
+   ```bash
+   ./IntTotalMoney
 
-   ```bash    
-    ./rupees_example
-
-"The total amount of money in the bank is ₹1,000,000" displayed in your terminal, with the amount represented in rupees (₹).
-
+You will be prompted to enter the total amount of money in the bank. After entering the value, the program will display "The total amount of money in the bank is ₹<entered_value>" in your terminal, with the amount represented in rupees (₹).

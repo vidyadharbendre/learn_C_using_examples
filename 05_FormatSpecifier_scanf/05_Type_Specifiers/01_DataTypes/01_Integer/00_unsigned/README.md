@@ -1,12 +1,14 @@
 # C Program: UnSigned_Int_Example
 
-This is a simple C program that demonstrates the use of an `unsigned int` variable to represent the number of students in a classroom. It also includes a `printf` statement to display the value of the `unsigned int` variable.
+## Purpose and Description
+
+This is a simple C program that demonstrates the use of an `unsigned int` variable to represent the number of students in a classroom. It also includes `scanf` and `printf` statements to accept and display the value of the `unsigned int` variable. The program showcases working with unsigned integer data types, handling user input, and displaying information in a C program.
 
 ## Program Details
 
 - The program declares an `unsigned int` variable named `numberOfStudents`.
-- A value of 150 is assigned to the `numberOfStudents` variable, which represents the number of students in the classroom.
-- The program uses the `printf` function to display a message along with the value of `numberOfStudents`. It utilizes the `%u` format specifier to indicate that the variable is an unsigned integer.
+- It prompts the user to enter the number of students and reads the input into the `numberOfStudents` variable using `scanf`.
+- The program uses the `printf` function to display the entered value with an appropriate message using the `%u` format specifier to indicate that the variable is an unsigned integer.
 
 ## Running the Program
 
@@ -16,3 +18,7 @@ This is a simple C program that demonstrates the use of an `unsigned int` variab
 
    ```bash
    gcc UnSignedIntStudentsCount.c -o UnSignedIntStudentsCount
+
+4. Run the compiled program
+   ```bash
+   ./UnSignedIntStudentsCount

@@ -20,6 +20,8 @@ Keywords play a vital role in the C programming language. They are used to defin
 
 ## Examples
 
+```c
+
 ### 1. `int` - Integer Variable Declaration
 
 ```c

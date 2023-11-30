@@ -6,8 +6,11 @@ int getNumberFromUser();
 
 // Main Function
 int main() {
-    int userNumber = getNumberFromUser(); // Get a number from the user
+    int userNumber; //declaration
+    
+    userNumber = getNumberFromUser(); // Get a number from the user
     displayEnteredNumber(userNumber);
+    
     return 0;
 }
 

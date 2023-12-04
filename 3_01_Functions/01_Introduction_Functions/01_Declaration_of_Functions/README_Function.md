@@ -51,9 +51,7 @@ Second Example:
 #include <stdio.h>
 
 // Function declaration
-void greet() {
-    printf("Hello, welcome to functions in C!\n");
-}
+void greet();
 
 // Main function
 int main() {
@@ -61,15 +59,10 @@ int main() {
     greet();
     return 0;
 }
-
+// Function definition
+void greet() {
+    printf("Hello, welcome to functions in C!\n");
+}
 ```
-
-
-
-
-
-
-This way, whenever you want to make a cake (use the function), you just call the recipe (function) without rewriting all the steps. Functions help you avoid repeating code, just like using a recipe saves you from memorizing cooking steps every time you want to make a dish.
-
-
-
+This way, whenever we want to make a cake (use the function), you just call the recipe (function) without rewriting all the steps. 
+- Functions help you avoid repeating code, just like using a recipe saves you from memorizing cooking steps every time you want to make a dish.

@@ -1,4 +1,9 @@
-/*
+/* 
+Author: Vidyadhar Bendre
+
+Email: vidyadhar.bendre@gmail.com
+
+Date: 4th December, 2023
 
 Purpose:
 In modern C programming, the auto keyword isn't typically used explicitly for local variables, as it's the default storage class for variables declared within a function. But conceptually, we can imagine a scenario to explain the auto storage class.
@@ -12,7 +17,6 @@ During the workday, the deskItems variable is accessible within the workday() fu
 Once the workday function scope ends (similar to the end of the workday when the employee leaves the workspace), the deskItems variable is no longer accessible or relevant.
 
 The auto storage class, although the default in C, essentially signifies the automatic creation and destruction of variables within their enclosing block or function scope. In this analogy, the employee's personal items are automatically placed on the desk at the start of the workday (workday() function) and are no longer accessible or relevant once the workday ends (function scope exits).
-
 */
 
 #include <stdio.h>
@@ -33,8 +37,7 @@ void workday() {
     printf("Number of items on the desk: %d\n", deskItems);
 }
 
-//The output of the above program is shown as below;
-
+// The output of the above program is shown below:
 /*
 Number of items on the desk: 3
 */

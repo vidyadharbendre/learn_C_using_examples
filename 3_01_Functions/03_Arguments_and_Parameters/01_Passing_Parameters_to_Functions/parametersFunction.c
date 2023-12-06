@@ -10,7 +10,6 @@ int main() {
     return 0;
 }
 
-
 // Function with parameters
 void displayNumber(int num) {
     printf("The existing number is: %d\n", num);

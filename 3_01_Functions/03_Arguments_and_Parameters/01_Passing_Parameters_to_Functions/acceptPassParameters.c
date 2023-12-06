@@ -49,9 +49,6 @@ The program uses printf() to display the entered numbers and the computed sum in
 
 */
 
-
-
-
 #include <stdio.h>
 
 // Function declaration

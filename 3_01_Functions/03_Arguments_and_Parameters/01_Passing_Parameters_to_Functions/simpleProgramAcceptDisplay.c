@@ -13,12 +13,6 @@ int main() {
     
     return 0;
 }
-
-// Function to display the entered number
-void displayEnteredNumber(int numFromMain) {
-    printf("The entered number is: %d\n", numFromMain);
-}
-
 // Function to get a number from the user
 int getNumberFromUser() {
     int userInput; // Variable specifically for user input
@@ -26,6 +20,13 @@ int getNumberFromUser() {
     scanf("%d", &userInput);
     return userInput;
 }
+
+// Function to display the entered number
+void displayEnteredNumber(int numFromMain) {
+    printf("The entered number is: %d\n", numFromMain);
+}
+
+
 
 // The output of the above program is
 

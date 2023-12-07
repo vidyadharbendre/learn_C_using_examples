@@ -30,6 +30,13 @@ int computeFactorial(int fnumber) {
     return fresult;
 }
 
+// The output of the above program is:
+/*  
+Enter the value of n: 3
+Enter the value of r: 2
+Permutations (nPr): 6
+*/
+
 int calculatePermutations(int n, int r) {
     int nFactorial = computeFactorial(n);
     int nMinusRFactorial = computeFactorial(n - r);

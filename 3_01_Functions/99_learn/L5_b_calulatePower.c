@@ -28,3 +28,10 @@ int calculatePower(int base, int exponent) {
     }
     return result;
 }
+
+// The output of the above program is:
+/*  
+Enter the base: 3
+Enter the exponent: 2
+Result: 9
+*/

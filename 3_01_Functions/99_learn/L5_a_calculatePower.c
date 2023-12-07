@@ -20,3 +20,11 @@ int main() {
 
     return 0;
 }
+
+// The output of the above program is
+
+/*  
+Enter the base: 2
+Enter the exponent: 4
+Result: 16
+*/

@@ -37,3 +37,10 @@ int calculateCombinations(int n, int r) {
 
     return nFactorial / (rFactorial * nMinusRFactorial);
 }
+
+// The output of the above program is:
+/*  
+Enter the value of n: 3
+Enter the value of r: 2
+Combinations (nCr): 3
+*/

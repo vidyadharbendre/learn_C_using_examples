@@ -8,7 +8,8 @@ int main() {
 
     if (number < 0) {
         printf("Factorial is not defined for negative numbers.\n");
-    } else {
+    } 
+    else {
         do {
             result *= i;
             i++;
@@ -18,3 +19,8 @@ int main() {
 
     return 0;
 }
+
+/*  
+Enter a number: 3
+Factorial of 3 is: 6
+*/

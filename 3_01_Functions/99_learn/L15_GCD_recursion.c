@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int gcd(int a, int b);
-void swap(int a, int b); // Function prototype for swap
+void swap(); // Function prototype for swap
 
 int num1, num2; // Global variables for numbers
 
@@ -12,6 +12,9 @@ int main() {
     if (num1 < 0 || num2 < 0) {
         printf("GCD is not defined for negative numbers.\n");
     } else {
+        if (num1 < num2) {
+            swap(); // If num1 is smaller, swap values
+        }
         int result = gcd(num1, num2);
         printf("GCD: %d\n", result);
     }
@@ -23,17 +26,24 @@ int gcd(int a, int b) {
     if (b == 0) {
         return a;
     } else {
-        if (a < b)
-            swap(num1, num2); // Pass num1 and num2 directly to swap
-        return gcd(a, a % b);
+        return gcd(b, a % b); // Use Euclidean algorithm
     }
 }
 
-void swap(int a, int b) {
-    int temp = a; // Use the local variables for swapping
-    a = b;
-    b = temp;
-
-    num1 = a; // Assign the swapped values back to global variables
-    num2 = b;
+void swap() {
+    int temp = num1; // Use a temporary variable for swapping
+    num1 = num2;
+    num2 = temp;
 }
+
+// The output of the above program is:
+
+/* 
+Enter two numbers: 5 100
+GCD: 5
+*/
+
+/* . 
+Enter two numbers: 100 5
+GCD: 5
+*/

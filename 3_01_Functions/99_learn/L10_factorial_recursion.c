@@ -30,3 +30,13 @@ int computeFactorial_Recursion(int fnumber){
         }
         return fresult;
 }
+
+// The output of the above program is:
+/*  
+Enter a number: 5
+2
+ 6
+ 24
+ 120
+ Factorial of 5 is: 120
+*/

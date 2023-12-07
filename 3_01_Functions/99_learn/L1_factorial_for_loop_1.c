@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-    int number, result, i;
+    int number, result=1, i;
     printf("Enter the number\n");
     scanf("%d", &number);
     for(i=1; i<= number; i++){
@@ -11,4 +11,5 @@ int main(){
     printf("result : %d\n", result);
 
     return 0;
+
 }

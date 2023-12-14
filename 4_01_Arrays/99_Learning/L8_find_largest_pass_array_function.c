@@ -46,3 +46,15 @@ int findMax(int farr[], int fsize) {
 
     return max; // Return the maximum value found
 }
+
+// the output of the above program is:
+/* . 
+Enter 5 elements for the array:
+Enter element 1: 44
+Enter element 2: 1
+Enter element 3: 09
+Enter element 4: 55
+Enter element 5: 7
+The array elements are: 44 1 9 55 7 
+The maximum value in the array is: 55
+*/

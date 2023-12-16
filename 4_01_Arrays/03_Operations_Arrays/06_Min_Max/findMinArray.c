@@ -1,7 +1,16 @@
+/*
+Author:
+Vidyadhar Bendre
+
+Email:
+vidyadhar.bendre@gmail.com
+
+Date:
+16 December 2023
+*/
 #include <stdio.h>
 
 #define MAX_SIZE_OF_AN_ARRAY 5
-
 
 int main(){
     int array[MAX_SIZE_OF_AN_ARRAY];
@@ -33,3 +42,19 @@ int main(){
 
     return 0;
 }
+
+// The output of the above program is shown as below:
+/* . 
+Enter data for an array of the lenth 5
+Enter data for the position 0 : 97
+Enter data for the position 1 : 05
+Enter data for the position 2 : -8
+Enter data for the position 3 : 0
+Enter data for the position 4 : 32
+array[0] : 97
+array[1] : 5
+array[2] : -8
+array[3] : 0
+array[4] : 32
+The smallest element in the array is : -8 
+*/

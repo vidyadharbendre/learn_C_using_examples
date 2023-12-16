@@ -18,3 +18,8 @@ void fibonacciLoop(int fn) {
         fsecond = next;
     }
 }
+
+// The output of the above program is shown below:
+/* . 
+Fibonacci Series using loop: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, %  
+*/

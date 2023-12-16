@@ -15,3 +15,9 @@ int main() {
     
     return 0;
 }
+
+// The output of the above program is shown as below:
+/* . 
+Pointer-Based Method:
+10 20 30 40 50 
+*/

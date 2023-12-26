@@ -20,7 +20,7 @@
       // Function body
   }
 ```
-Example
+Example:
 ```c
 int add(int a, int b) {
     return a + b;
@@ -79,6 +79,8 @@ User-defined functions in C are vital components that enable code modularity, re
   return_type function_name(parameters) {
       // Function body
   }
+```
+- **Example:**
 ```c
 
 int add(int a, int b) {

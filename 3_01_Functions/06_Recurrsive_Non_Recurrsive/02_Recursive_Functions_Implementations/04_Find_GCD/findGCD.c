@@ -18,12 +18,14 @@ int main() {
 }
 // Function to calculate GCD using recursion - Definition
 int gcd(int a, int b) {
+    int reminder;
+    reminder = a % b; 
     // Base case
-    if (b == 0) {
-        return a;
+    if (reminder == 0) {
+        return b;
     } else {
         // Recursive case
-        return gcd(b, a % b);
+        return gcd(b, reminder);
     }
 }
 

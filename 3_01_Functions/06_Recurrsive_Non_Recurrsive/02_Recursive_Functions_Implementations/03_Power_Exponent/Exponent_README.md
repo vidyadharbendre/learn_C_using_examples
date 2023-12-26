@@ -24,3 +24,4 @@ int power(int base, int exponent) {
         return base * power(base, exponent - 1);
     }
 }
+```

@@ -27,3 +27,12 @@ The program output will display the memory addresses and characters of the strin
 
 The output of the program will resemble the following:
 
+/* . 
+Address   Value
+0x16b68e734   'H'
+0x16b68e735   'E'
+0x16b68e736   'L'
+0x16b68e737   'L'
+0x16b68e738   'O'
+0x16b68e739   '' (null terminator)
+*/

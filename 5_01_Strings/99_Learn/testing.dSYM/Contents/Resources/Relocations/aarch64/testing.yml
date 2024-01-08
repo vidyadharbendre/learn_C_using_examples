@@ -1,0 +1,10 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/vidyadharbendre/c_workspace/learn_C_using_examples/5_01_Strings/99_Learn/testing'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003C8C, symSize: 0x130 }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003C8C, symSize: 0x130 }
+  - { offsetInCU: 0x85, offset: 0x85, size: 0x8, addend: 0x0, symName: _findLengthOfTheString, symObjAddr: 0x130, symBinAddr: 0x100003DBC, symSize: 0x48 }
+  - { offsetInCU: 0xBB, offset: 0xBB, size: 0x8, addend: 0x0, symName: _displayString, symObjAddr: 0x178, symBinAddr: 0x100003E04, symSize: 0x78 }
+  - { offsetInCU: 0xFB, offset: 0xFB, size: 0x8, addend: 0x0, symName: _checkIsDigit, symObjAddr: 0x1F0, symBinAddr: 0x100003E7C, symSize: 0x50 }
+...

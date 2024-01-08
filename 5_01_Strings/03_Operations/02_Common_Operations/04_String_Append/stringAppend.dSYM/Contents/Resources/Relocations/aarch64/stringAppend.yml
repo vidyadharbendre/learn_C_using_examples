@@ -1,8 +1,0 @@
----
-triple:          'arm64-apple-darwin'
-binary-path:     '/Users/vidyadharbendre/c_workspace/learn_C_using_examples/5_01_Strings/03_Operations/02_Common_Operations/04_String_Append/stringAppend'
-relocations:
-  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003D18, symSize: 0x150 }
-  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003D18, symSize: 0x150 }
-  - { offsetInCU: 0x96, offset: 0x96, size: 0x8, addend: 0x0, symName: _user_defined_append, symObjAddr: 0x150, symBinAddr: 0x100003E68, symSize: 0x7C }
-...

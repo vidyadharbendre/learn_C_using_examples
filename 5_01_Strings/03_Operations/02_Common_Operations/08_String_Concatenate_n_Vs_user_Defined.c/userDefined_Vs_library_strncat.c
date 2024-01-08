@@ -1,16 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-// User-defined strncat function without pointers
-void user_defined_strncat(char dest[], const char src[], size_t n) {
-    size_t dest_len = strlen(dest);
-    size_t i = 0;
-    while (src[i] != '\0' && i < n) {
-        dest[dest_len + i] = src[i];
-        i++;
-    }
-    dest[dest_len + i] = '\0'; // Null-terminate the concatenated string
-}
+void user_defined_strncat(char fdest[], char fsrc[], size_t fn);
 
 int main() {
     char str1[] = "Hello, ";
@@ -34,3 +25,23 @@ int main() {
 
     return 0;
 }
+
+// User-defined strncat function without pointers
+void user_defined_strncat(char fdest[], char fsrc[], size_t fn) {
+    size_t fdest_len = strlen(fdest);
+    size_t fi = 0;
+    while (fsrc[fi] != '\0' && fi < fn) {
+        fdest[fdest_len + fi] = fsrc[fi];
+        fi++;
+    }
+    fdest[fdest_len + fi] = '\0'; // Null-terminate the concatenated string
+}
+
+
+// The output of the above program is shown as below
+/*
+String 1......................................: Hello, 
+String 2......................................: world!
+Destination string (using strncat)............: Hello, wor
+Destination string (using user-defined function): Hello, wor
+*/

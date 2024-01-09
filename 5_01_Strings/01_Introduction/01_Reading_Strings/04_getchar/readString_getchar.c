@@ -17,3 +17,9 @@ int main() {
 
     return 0;
 }
+
+// The output of the above program is shown as below:
+/*
+Enter a string: Vidyadhar Bendre
+String read using getchar in a loop: Vidyadhar Bendre
+*/

@@ -49,3 +49,13 @@ void user_defined_strcat(char dest[], const char src[]) {
     }
     dest[dest_len + i] = '\0'; // Null-terminate the concatenated string
 }
+// The output of the above program is shown as below
+/*
+Enter the source string: Learn C
+Enter the destination string: using Examples!
+22 Learn Cusing Examples!
+String 1: Learn C
+String 2: using Examples!
+Destination string (using strcat): Learn Cusing Examples!
+Destination string (using user-defined function): Learn Cusing Examples!
+*/

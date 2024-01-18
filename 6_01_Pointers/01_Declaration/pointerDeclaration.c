@@ -28,7 +28,9 @@ int main(){
     printf("5. The value of the float variable using float variable...................: %f\n", floatVar4);
     printf("6. The address of the floating type variable or pointer to the floating...: %p\n", &floatVar4);    
     printf("7. The address of the floating type variable or pointer to the floating...: %p\n", floatpointerVar4);  
-    printf("8. The value of the float variable using pointer..........................: %f\n", *floatpointerVar4);   
+    printf("8. The value of the float variable using pointer..........................: %f\n", *floatpointerVar4);
+//    printf("9. pointer to the integer variable = address of the integer varable.......: %u\n", &intVar1);  
+//    printf("10. pointer to the integer variable = address of the integer varable......: %X\n", &intVar1);       
     return 0;
 }
 

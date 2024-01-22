@@ -20,8 +20,18 @@ int main() {
     *ptrSum = *ptr1 + *ptr2;
 
     // Display the results
-    printf("\nSum (direct addition): %d\n", num1 + num2);
-    printf("Sum (addition through pointers): %d\n", *ptrSum);
+    printf("\nSum (direct addition)...........: %d\n", num1 + num2);
+    printf("Sum (addition through pointers)...: %d\n", *ptrSum);
 
     return 0;
 }
+
+// The output of the above program is shown as below:
+/*
+Enter the first number: 45
+Enter the second number: 98
+
+Sum (direct addition): 143
+Sum (addition through pointers): 143
+*/
+

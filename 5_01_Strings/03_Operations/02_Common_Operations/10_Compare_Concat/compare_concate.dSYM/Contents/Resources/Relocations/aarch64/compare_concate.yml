@@ -1,0 +1,10 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/vidyadharbendre/c_workspace/learn_C_using_examples/5_01_Strings/03_Operations/02_Common_Operations/10_Compare_Concat/compare_concate'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003CD0, symSize: 0x148 }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003CD0, symSize: 0x148 }
+  - { offsetInCU: 0xA4, offset: 0xA4, size: 0x8, addend: 0x0, symName: _compareStrings, symObjAddr: 0x148, symBinAddr: 0x100003E18, symSize: 0x2C }
+  - { offsetInCU: 0xDA, offset: 0xDA, size: 0x8, addend: 0x0, symName: _concatenateStrings, symObjAddr: 0x174, symBinAddr: 0x100003E44, symSize: 0x48 }
+  - { offsetInCU: 0x11A, offset: 0x11A, size: 0x8, addend: 0x0, symName: _findStringLength, symObjAddr: 0x1BC, symBinAddr: 0x100003E8C, symSize: 0x24 }
+...

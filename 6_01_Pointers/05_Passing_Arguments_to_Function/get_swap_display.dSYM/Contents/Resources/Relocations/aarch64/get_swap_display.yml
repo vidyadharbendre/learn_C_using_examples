@@ -1,0 +1,9 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/vidyadharbendre/c_workspace/learn_C_using_examples/6_01_Pointers/05_Passing_Arguments_to_Function/get_swap_display'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003D84, symSize: 0xC4 }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003D84, symSize: 0xC4 }
+  - { offsetInCU: 0x93, offset: 0x93, size: 0x8, addend: 0x0, symName: _displayTwoVariables, symObjAddr: 0xC4, symBinAddr: 0x100003E48, symSize: 0x48 }
+  - { offsetInCU: 0xC5, offset: 0xC5, size: 0x8, addend: 0x0, symName: _swapTwoVariables, symObjAddr: 0x10C, symBinAddr: 0x100003E90, symSize: 0x3C }
+...

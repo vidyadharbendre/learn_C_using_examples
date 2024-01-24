@@ -1,0 +1,8 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/vidyadharbendre/c_workspace/learn_C_using_examples/6_01_Pointers/03_Operations/reverse_string'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003E08, symSize: 0x94 }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003E08, symSize: 0x94 }
+  - { offsetInCU: 0x69, offset: 0x69, size: 0x8, addend: 0x0, symName: _printReverse, symObjAddr: 0x94, symBinAddr: 0x100003E9C, symSize: 0xA0 }
+...

@@ -7,7 +7,6 @@
             "program": "enter program name, for example ${workspaceFolder}/a.out",
             "MIMode": "lldb"
         },
-        
         {
             "name": "(lldb) Attach",
             "type": "cppdbg",
@@ -163,6 +162,19 @@
             "externalConsole": false,
             "MIMode": "lldb",
             "preLaunchTask": "C/C++: clang build active file"
+        },
+        {
+            "name": "C/C++: gcc build and debug active file",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "C/C++: gcc build active file"
         }
     ],
     "version": "2.0.0"

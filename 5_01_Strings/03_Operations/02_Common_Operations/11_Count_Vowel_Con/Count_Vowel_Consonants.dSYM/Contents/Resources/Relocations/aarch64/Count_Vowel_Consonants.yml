@@ -1,0 +1,9 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/vidyadharbendre/c_workspace/learn_C_using_examples/5_01_Strings/03_Operations/02_Common_Operations/11_Count_Vowel_Con/Count_Vowel_Consonants'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003B08, symSize: 0xA4 }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003B08, symSize: 0xA4 }
+  - { offsetInCU: 0x69, offset: 0x69, size: 0x8, addend: 0x0, symName: _countVowelsAndConsonants, symObjAddr: 0xA4, symBinAddr: 0x100003BAC, symSize: 0x234 }
+  - { offsetInCU: 0xE1, offset: 0xE1, size: 0x8, addend: 0x0, symName: _isVowel, symObjAddr: 0x32C, symBinAddr: 0x100003E34, symSize: 0xB4 }
+...

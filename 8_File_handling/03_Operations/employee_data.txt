@@ -1,0 +1,15 @@
+Employee 1:
+Name: Vidyadhar
+Designation: Bendre
+Salary: 0.00
+
+Employee 2:
+Name: Asst.
+Designation: Professor
+Salary: 10000.00
+
+Employee 3:
+Name: Vivek
+Designation: Bendre
+Salary: 0.00
+

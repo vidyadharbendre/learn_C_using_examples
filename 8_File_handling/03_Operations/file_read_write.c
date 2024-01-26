@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 // Structure to represent employee details
 struct Employee {
@@ -9,10 +10,10 @@ struct Employee {
 
 int main() {
     // Open a file for writing
-    FILE *file = fopen("employee_data.txt", "w");
+    FILE *ptrtoFILE = fopen("employee_data.txt", "w");
 
     // Check if the file was opened successfully
-    if (file == NULL) {
+    if (ptrtoFILE == NULL) {
         printf("Error opening file for writing.\n");
         return 1; // Exit with an error code
     }
@@ -34,14 +35,14 @@ int main() {
         scanf("%f", &employees[i].salary);
 
         // Write employee information to the file
-        fprintf(file, "Employee %d:\n", i + 1);
-        fprintf(file, "Name: %s\n", employees[i].name);
-        fprintf(file, "Designation: %s\n", employees[i].designation);
-        fprintf(file, "Salary: %.2f\n\n", employees[i].salary);
+        fprintf(ptrtoFILE, "Employee %d:\n", i + 1);
+        fprintf(ptrtoFILE, "Name: %s\n", employees[i].name);
+        fprintf(ptrtoFILE, "Designation: %s\n", employees[i].designation);
+        fprintf(ptrtoFILE, "Salary: %.2f\n\n", employees[i].salary);
     }
 
     // Close the file
-    fclose(file);
+    fclose(ptrtoFILE);
 
     printf("Employee information has been written to the file 'employee_data.txt'.\n");
 

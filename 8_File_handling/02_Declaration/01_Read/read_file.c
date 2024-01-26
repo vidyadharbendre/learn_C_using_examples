@@ -9,20 +9,21 @@ int fprintf(FILE *stream, const char *format, ...);
 */
 
 int main() {
-    FILE *file = fopen("example.txt", "w");
-    if (file == NULL) {
-        perror("Error opening file");
+    FILE *ptrtoFILE;
+    ptrtoFILE = fopen("example.txt", "w");
+    if (ptrtoFILE == NULL) {
+        printf("Error opening file");
         return 1;
     }
 
     // Writing using fwrite
-    const char data[] = "Hello, File!";
-    fwrite(data, sizeof(char), sizeof(data), file);
+    // const char data[] = "Hello, File!";
+    // fwrite(data, sizeof(char), sizeof(data), ptrtoFILE);
 
     // Alternatively, writing using fprintf
-    // fprintf(file, "Hello, File!");
+    fprintf(ptrtoFILE, "Hello, File!");
 
-    fclose(file);
+    fclose(ptrtoFILE);
 
     return 0;
 }

@@ -8,15 +8,16 @@ FILE *fopen(const char *filename, const char *mode);
 */
 
 int main() {
-    FILE *file = fopen("example.txt", "w");
-    if (file == NULL) {
-        perror("Error opening file");
+    FILE *ptrtoFILE;
+    ptrtoFILE = fopen("example.txt", "w");
+    if (ptrtoFILE == NULL) {
+        printf("Error opening file");
         return 1;
     }
 
     // File operations...
 
-    fclose(file);
+    fclose(ptrtoFILE);
 
     return 0;
 }

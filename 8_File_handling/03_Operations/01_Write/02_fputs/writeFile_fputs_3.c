@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main() {
     // Declare a FILE pointer
@@ -21,7 +22,7 @@ int main() {
     printf("Enter a string: ");
     
     // Read a string from the keyboard
-    scanf("%80[^\n]", inputString); // Reading up to 80 characters until a newline is encountered
+    gets(inputString);
 
     // Write each character to the file using fputc in a loop
     for (int i = 0; inputString[i] != '\0'; i++) {

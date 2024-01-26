@@ -28,46 +28,38 @@ int main() {
     }
 
     // Reallocating memory to increase the size
-    int newSize = size*2;
-    arr = (int *)realloc(arr, newSize * sizeof(int));
+    int newSize = size;
+    int *newarr = (int *)realloc(arr, newSize * sizeof(int));
 
     // Checking if reallocation was successful
-    if (arr == NULL) {
+    if (newarr == NULL) {
         printf("Memory reallocation failed.\n");
-        return 1; // Exit with an error code
-    }
-
-    // Using the reallocated memory
-    for (int i = size; i < newSize; i++) {
-        arr[i] = i + 1;
+        free(arr);  // Free the original memory before exiting with an error code
+        return 1;   // Exit with an error code
     }
 
     // Displaying the reallocated memory address
-    printf("\nReallocated Memory Address: %p\n", (void *)arr);
+    printf("\nReallocated Memory Address: %p\n", (void *)newarr);
 
     // Displaying the updated values
+    for (int i = size; i < newSize; i++) {
+        newarr[i] = i + 1;
+    }
+
     for (int i = 0; i < newSize; i++) {
-        printf("%d ", arr[i]);
+        printf("%d ", newarr[i]);
     }
 
     // Freeing the final allocated memory
-    free(arr);
+    free(newarr);
 
     return 0;
 }
 
-//The output of the above program is shown as below
+// The output of the above program is shown as below
 /*
-Original Memory Address: 0x121705ea0
+Original Memory Address: 0x11f605ee0
 1 2 3 4 5 
-Reallocated Memory Address: 0x121705ea0
-1 2 3 4 5 6 7 8 
-*/
-// may or may not beign with the same memory location!
-/*
-
-Original Memory Address: 0x127605ee0
+Reallocated Memory Address: 0x11f605ee0
 1 2 3 4 5 
-Reallocated Memory Address: 0x127605fc0
-1 2 3 4 5 6 7 8 9 10 
 */

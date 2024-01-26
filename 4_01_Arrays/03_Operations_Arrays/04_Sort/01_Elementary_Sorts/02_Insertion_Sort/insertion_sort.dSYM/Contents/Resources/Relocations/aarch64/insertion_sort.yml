@@ -1,0 +1,8 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/vidyadharbendre/c_workspace/learn_C_using_examples/4_01_Arrays/03_Operations_Arrays/04_Sort/01_Elementary_Sorts/02_Insertion_Sort/insertion_sort'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003D70, symSize: 0xF0 }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003D70, symSize: 0xF0 }
+  - { offsetInCU: 0x93, offset: 0x93, size: 0x8, addend: 0x0, symName: _insertionSort, symObjAddr: 0xF0, symBinAddr: 0x100003E60, symSize: 0xF4 }
+...

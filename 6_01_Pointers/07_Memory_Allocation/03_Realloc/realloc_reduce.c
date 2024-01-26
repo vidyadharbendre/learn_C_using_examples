@@ -28,7 +28,7 @@ int main() {
     }
 
     // Reallocating memory to increase the size
-    int newSize = size*2;
+    int newSize = size/2;
     arr = (int *)realloc(arr, newSize * sizeof(int));
 
     // Checking if reallocation was successful
@@ -58,16 +58,8 @@ int main() {
 
 //The output of the above program is shown as below
 /*
-Original Memory Address: 0x121705ea0
+Original Memory Address: 0x124e05ee0
 1 2 3 4 5 
-Reallocated Memory Address: 0x121705ea0
-1 2 3 4 5 6 7 8 
-*/
-// may or may not beign with the same memory location!
-/*
-
-Original Memory Address: 0x127605ee0
-1 2 3 4 5 
-Reallocated Memory Address: 0x127605fc0
-1 2 3 4 5 6 7 8 9 10 
+Reallocated Memory Address: 0x124e05ee0
+1 2 
 */

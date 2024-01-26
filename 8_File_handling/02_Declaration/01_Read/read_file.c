@@ -43,5 +43,5 @@ vi example.txt
 
 // quit using
 /*
-Escate q! 
+Escape q! 
 */

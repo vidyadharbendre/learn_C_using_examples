@@ -1,8 +1,11 @@
-/* Program Name: ShortIntTempertureInCelsius.c
-   Author: Vidyadhar Bendre
-   Email: vidyadhar.bendre@gmail.com
-   Description: In this example, we have declared a short int variable named temperature, which represents the current temperature in degrees Celsius. When we use the %hd format specifier in the printf statement, it tells the program to print a short integer, matching the data type of the temperature variable. The output will display the current temperature in degrees Celsius as a short integer.
+/*  Program Name: ShortIntTempertureInCelsius.c
+    Author: Vidyadhar Bendre
+    Email: vidyadhar.bendre@gmail.com
+    Description: In this example, we have declared a short int variable named temperature, which represents the current temperature in degrees Celsius. When we use the %hd format specifier in the printf statement, it tells the program to print a short integer, matching the data type of the temperature variable. The output will display the current temperature in degrees Celsius as a short integer.
 
+    Note:
+    You can write and visualize C programs on your mobile using Python Tutor at:
+    https://pythontutor.com
 */
 
 #include <stdio.h>

@@ -1,8 +1,17 @@
-/* Program Name: MyCprogram_template.c
-   Author: Vidyadhar Bendre
-   Email: vidyadhar.bendre@gmail.com
-   Date: October 23, 2023
-   Description: This program demonstrates basic C programming template.
+/*  Program Name: MyCprogram_template.c
+    Author: Vidyadhar Bendre
+    Email: vidyadhar.bendre@gmail.com
+    Date: October 23, 2023
+    Description: This program demonstrates basic C programming template.
+
+
+    Version History
+    Version 1.0 - [Date: 2023-10-23] - Initial Program
+    Version 1.1 - [Date: 2024-09-29] - Added a note about PythonTutor.com to write and visualize C programs on mobile.
+  
+    Note:
+    You can write and visualize C programs on your mobile using Python Tutor at:
+    https://pythontutor.com
 
    
 */

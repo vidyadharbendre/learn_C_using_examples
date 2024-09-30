@@ -3,6 +3,13 @@
     Email: vidyadhar.bendre@gmail.com
     Description: In this example, we have declared an int variable named totalMoney, which represents the total amount of money in a bank account. The value assigned is ten lakhs rupees (one million dollars). This value is larger than what can be represented by an unsigned int. When we use the %d format specifier in the printf statement, it tells the program to print an integer, matching the data type of the totalMoney variable. The output will display the total amount of money in the bank as an integer.
 
+    Version History
+    Version 1.0 - [Date: 2023-09-23] - Initial Program
+    Version 1.1 - [Date: 2024-09-29] - Added a note about PythonTutor.com to write and visualize C programs on mobile.
+  
+    Note:
+    You can write and visualize C programs on your mobile using Python Tutor at:
+    https://pythontutor.com
 */
 
 #include <stdio.h>

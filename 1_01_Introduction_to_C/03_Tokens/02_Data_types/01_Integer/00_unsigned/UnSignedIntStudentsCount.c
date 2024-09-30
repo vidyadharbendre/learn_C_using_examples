@@ -7,6 +7,12 @@
    When we use the %u format specifier in the printf statement, it tells the program to print an unsigned integer, matching the data type of the numberOfStudents variable. 
    
    The output will display the number of students in the classroom as an unsigned integer..
+
+    Note:
+    You can write and visualize C programs on your mobile using Python Tutor at:
+    https://pythontutor.com
+ 
+
 */
 #include <stdio.h>
 

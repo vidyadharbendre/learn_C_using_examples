@@ -12,7 +12,6 @@
     You can write and visualize C programs on your mobile using Python Tutor at:
     https://pythontutor.com
  
-
 */
 #include <stdio.h>
 
@@ -26,3 +25,9 @@ int main() {
     // Return 0 to indicate successful program execution.
     return 0;
 }
+
+//The output of the program is shown as below
+
+/*
+The number of students in the classroom is 150
+*/

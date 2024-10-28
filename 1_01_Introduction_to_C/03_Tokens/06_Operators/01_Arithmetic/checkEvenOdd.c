@@ -12,6 +12,12 @@
     - It utilizes the modulus operator (%) to find the remainder when the entered number is divided by 2.
     - If the remainder is 0, the program identifies the number as even; otherwise, it classifies it as odd.
     - The program then displays the result, confirming whether the entered number is even or odd.
+    Version History
+    Version 1.0 - [Date: 2024-28-10] - Added a note about PythonTutor.com to write and visualize C programs on mobile.
+  
+    Note:
+    You can write and visualize C programs on your mobile using Python Tutor at:
+    https://pythontutor.com
 */
 
 #include <stdio.h>

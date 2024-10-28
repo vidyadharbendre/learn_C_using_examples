@@ -20,6 +20,13 @@
     - If the discriminant is less than 0, it calculates complex roots with real and imaginary parts.
     The program displays the roots based on the type of roots it calculates.
 
+    Version History
+    Version 1.0 - [Date: 2024-28-10] - Added a note about PythonTutor.com to write and visualize C programs on mobile.
+  
+    Note:
+    You can write and visualize C programs on your mobile using Python Tutor at:
+    https://pythontutor.com
+
 */
 
 #include <stdio.h>

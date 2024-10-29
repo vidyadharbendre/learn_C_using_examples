@@ -4,7 +4,7 @@
     Email: vidyadhar.bendre@gmail.com
     
     Description: This program determines a student's grade based on their marks 
-    using a switch statement. It categorizes grades as follows:
+    using if-else if statements. It categorizes grades as follows:
         - A: 90 and above
         - B: 80 to 89
         - C: 70 to 79
@@ -27,23 +27,17 @@ int main() {
     printf("Enter your marks: ");
     scanf("%d", &marks);
 
-    // Determine grade based on marks input using switch
-    switch (marks / 10) {
-        case 10:  // Special case for exactly 100
-        case 9:
-            printf("Grade: A\n");
-            break;
-        case 8:
-            printf("Grade: B\n");
-            break;
-        case 7:
-            printf("Grade: C\n");
-            break;
-        case 6:
-            printf("Grade: D\n");
-            break;
-        default:
-            printf("Grade: F\n");
+    // Determine grade based on marks input using if-else if statements
+    if (marks >= 90) {
+        printf("Grade: A\n");
+    } else if (marks >= 80) {
+        printf("Grade: B\n");
+    } else if (marks >= 70) {
+        printf("Grade: C\n");
+    } else if (marks >= 60) {
+        printf("Grade: D\n");
+    } else {
+        printf("Grade: F\n");
     }
 
     return 0;

@@ -1,3 +1,25 @@
+/*
+    Name of the Program: File Extension Checker
+    Author: Vidyadhar Bendre
+    Email: vidyadhar.bendre@gmail.com
+    
+    Description: This program checks the file extension of a given filename and 
+    categorizes the file type based on its extension. It recognizes:
+        - Text files: .txt
+        - PDF files: .pdf
+        - Image files: .png, .jpg
+    If the extension is not recognized, it outputs "Unknown file type". If no 
+    extension is found, it indicates that as well.
+
+    Version History:
+        Version 1.0 - [Date: 2024-10-29] - Initial version with a note for PythonTutor.com 
+        for visualizing C programs on mobile.
+
+    Note:
+    You can write and visualize C programs on your mobile using Python Tutor at:
+    https://pythontutor.com
+*/
+
 #include <stdio.h>
 #include <string.h>
 
@@ -8,6 +30,7 @@ int main() {
     if (extension != NULL) {
         extension++; // Move past the period to start comparing the extension itself
 
+        // Determine file type based on the extension
         switch (*extension) {
             case 't':
                 if (strcmp(extension, "txt") == 0) {
@@ -35,7 +58,28 @@ int main() {
 
     return 0;
 }
-// The output of the above program is shown below:
-/* . 
+
+// Compilation command: gcc fileType_Identification.c -o fileType_Identification
+// Execution command: ./fileType_Identification
+
+/* Example Outputs:
+
+Case 1:
 PDF file
+
+Case 2:
+Enter filename: image.png
+Image file
+
+Case 3:
+Enter filename: notes.txt
+Text file
+
+Case 4:
+Enter filename: archive.zip
+Unknown file type
+
+Case 5:
+Enter filename: file_without_extension
+No file extension found
 */

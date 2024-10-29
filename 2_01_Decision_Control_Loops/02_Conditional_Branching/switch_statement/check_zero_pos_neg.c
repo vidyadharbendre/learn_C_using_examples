@@ -45,8 +45,8 @@ int main() {
     return 0;
 }
 
-// Compilation command: gcc numberTypeDetermination_switch.c -o numberTypeDetermination_switch
-// Execution command: ./numberTypeDetermination_switch
+// Compilation command: gcc check_zero_pos_neg.c -o check_zero_pos_neg
+// Execution command: ./check_zero_pos_neg
 
 /* Example Outputs:
 

@@ -24,6 +24,13 @@ int main() {
     printf("Enter a number: ");
     scanf("%d", &num);
 
+    int test1, test2;
+    test1 = num > 0;
+    test2 = num < 0;
+
+    printf("test1...:%d\n", test1);
+    printf("test2...:%d\n", test2);
+
     // Categorize the number as positive (1), negative (-1), or zero (0)
     int category = (num > 0) - (num < 0);
 

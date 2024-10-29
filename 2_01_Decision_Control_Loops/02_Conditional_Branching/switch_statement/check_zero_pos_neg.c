@@ -58,14 +58,20 @@ int main() {
 /* Example Outputs:
 
 Case 1:
-Enter a number: 5
+Enter a number: 8
+test1...:1
+test2...:0
 The number is positive.
 
 Case 2:
-Enter a number: -3
+Enter a number: -6
+test1...:0
+test2...:1
 The number is negative.
 
 Case 3:
 Enter a number: 0
+test1...:0
+test2...:0
 The number is zero.
 */

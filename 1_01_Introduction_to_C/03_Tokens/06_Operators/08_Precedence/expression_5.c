@@ -28,6 +28,15 @@
     - --c * a results in 8.
     - The calculation then proceeds: 8 + 3 - 8 equals 3.
 
+
+    Version History:
+        Version 1.0 - [Date: 05-NOV-2024] - Initial version with instructions on 
+        using PythonTutor.com to visualize C programs on mobile.
+
+    Note:
+    You can write and visualize C programs on your mobile using Python Tutor at:
+    https://pythontutor.com
+
 */
 
 #include <stdio.h>
@@ -47,4 +56,14 @@ int main() {
 // The output of the above program is
 /*
 result is : 3 
+
+Explanation of Arithmetic Expression:
+- Initial values: a = 8, b = 3, c = 2
+- Step-by-Step Calculation:
+  1. `--c` is evaluated first, making `c = 1`.
+  2. `--c * a` is calculated as `1 * 8 = 8`.
+  3. Now, the expression is `8 + (b++) - 8`.
+  4. `b++` uses the current value of `b` (3) in this expression, and then `b` increments to 4.
+  5. The expression simplifies to `8 + 3 - 8`.
+  6. Final result: `3`.
 */

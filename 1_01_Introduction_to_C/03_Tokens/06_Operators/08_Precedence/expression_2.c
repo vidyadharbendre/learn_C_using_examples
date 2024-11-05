@@ -11,6 +11,15 @@
     Purpose: 
     This C program serves as a basic template to showcase a simple arithmetic calculation and print the result.
     The program demonstrates the use of arithmetic operators and showcases the order of precedence in calculations.
+
+    Version History:
+        Version 1.0 - [Date: 05-NOV-2024] - Initial version with instructions on 
+        using PythonTutor.com to visualize C programs on mobile.
+
+    Note:
+    You can write and visualize C programs on your mobile using Python Tutor at:
+    https://pythontutor.com
+
 */
 
 #include <stdio.h>

@@ -30,6 +30,14 @@
 
     - The entire expression (a > b && b <= c) || !(a % c == 0) evaluates to True || False, resulting in True.
 
+    Version History:
+        Version 1.0 - [Date: 05-NOV-2024] - Initial version with instructions on 
+        using PythonTutor.com to visualize C programs on mobile.
+
+    Note:
+    You can write and visualize C programs on your mobile using Python Tutor at:
+    https://pythontutor.com
+
 */
 
 #include <stdio.h>
@@ -52,5 +60,22 @@ int main() {
 /*
 
 result is : 0
+
+Explanation of Logical Expression:
+- Initial values: a = 15, b = 4, c = 3
+
+- Logical expression: (a > b && b <= c) || !(a % c == 0)
+
+Step-by-Step Evaluation:
+1. `(a > b)`: Check if `a` (15) is greater than `b` (4). This is `true`.
+2. `(b <= c)`: Check if `b` (4) is less than or equal to `c` (3). This is `false`.
+3. `(a > b && b <= c)`: Combine the results of steps 1 and 2 using `&&` (AND operator). Since one condition is `false`, the entire expression is `false`.
+
+4. `(a % c == 0)`: Check if the remainder of `a` divided by `c` (15 % 3) is equal to 0. Since 15 is divisible by 3, this is `true`.
+5. `!(a % c == 0)`: Apply `!` (NOT operator) to the result of step 4. The result is `false` because `!(true)` is `false`.
+
+6. Final expression: `(a > b && b <= c) || !(a % c == 0)`: Combine the results of steps 3 and 5 using `||` (OR operator). Since both parts are `false`, the entire expression is `false`.
+
+7. Result: `0` (as `false` is represented by 0 in C).
 
 */

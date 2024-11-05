@@ -26,6 +26,14 @@
     - The expression resolves to true || false || true, which evaluates to true.
     - The value true is assigned to the variable 'result'.
 
+    Version History:
+        Version 1.0 - [Date: 05-NOV-2024] - Initial version with instructions on 
+        using PythonTutor.com to visualize C programs on mobile.
+
+    Note:
+    You can write and visualize C programs on your mobile using Python Tutor at:
+    https://pythontutor.com
+
 */
 
 #include <stdio.h>
@@ -49,5 +57,40 @@ int main() {
 /*
 
 result is : 1
+
+Explanation of the Logical and Comparison Expression:
+- Initial values: a = 11, b = 6, c = 0, d = 7, e = 5
+
+Step-by-Step Evaluation:
+1. **Expression Breakdown**:
+   The expression `a + 2 > b || !c && a == d || a - 2 <= e` is evaluated based on logical operator precedence:
+   - `!` (NOT) has the highest precedence, followed by `&&` (AND), and then `||` (OR).
+   - We will evaluate each part in the order of precedence.
+
+2. **Evaluating `(a + 2 > b)`**:
+   - `a + 2` is `11 + 2 = 13`.
+   - `13 > b` (where `b` is `6`) is `true` (or `1`).
+   - Since `||` (OR) short-circuits when the left side is `true`, this alone would make the whole expression `true`. However, let’s evaluate the remaining parts to understand the logic fully.
+
+3. **Evaluating `!c`**:
+   - `c` is `0`, and `!c` is `true` (or `1`), because logical NOT (`!`) of `0` is `1`.
+
+4. **Evaluating `(a == d)`**:
+   - `a` is `11` and `d` is `7`.
+   - `a == d` is `false` (or `0`).
+
+5. **Evaluating `!c && a == d`**:
+   - Since `!c` is `true` (1) and `a == d` is `false` (0), the expression `!c && a == d` is `false` (0).
+
+6. **Evaluating `(a - 2 <= e)`**:
+   - `a - 2` is `11 - 2 = 9`.
+   - `9 <= e` (where `e` is `5`) is `false` (0).
+
+7. **Combining the Expressions with `||` and `&&`**:
+   - We have: `(true) || (false) || (false)`.
+   - The overall expression is `true` (1) because at least one part of the expression connected by `||` is `true`.
+
+**Summary**:
+- The program outputs `result is : 1`.
 
 */

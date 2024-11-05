@@ -22,6 +22,16 @@
     - a %= (b + c) calculates the modulus of 'a' (21) with the sum (9), which is 3.
     - The value of 'a' after the operation is 3, and that value is assigned to the variable 'result'.
 
+
+    Version History:
+        Version 1.0 - [Date: 05-NOV-2024] - Initial version with instructions on 
+        using PythonTutor.com to visualize C programs on mobile.
+
+    Note:
+    You can write and visualize C programs on your mobile using Python Tutor at:
+    https://pythontutor.com
+
+
 */
 
 #include <stdio.h>
@@ -44,5 +54,27 @@ int main() {
 /*
 
 result is : 3
+
+Explanation of the Compound Assignment Expression:
+- Initial values: a = 21, b = 7, c = 2
+
+Step-by-Step Evaluation:
+1. `(b + c)`: The expression inside the parentheses is evaluated first.
+   - `b + c` results in `7 + 2`, which equals `9`.
+
+2. `a %= (b + c)`: The compound assignment `%=` operator takes the value of `a` and applies the modulus operation with `9`.
+   - This means `a = a % 9`.
+   - Since `21 % 9` results in a remainder of `3`, `a` is updated to `3`.
+
+3. `result = a %= (b + c)`:
+   - The expression `a %= (b + c)` not only updates `a` but also assigns the final value of `a` (which is now `3`) to `result`.
+
+Final values after the expression:
+- `result = 3`
+- `a = 3` (after the modulus operation)
+- `b` and `c` remain unchanged, with `b = 7` and `c = 2`.
+
+Summary:
+- The program outputs `result is : 3`.
 
 */

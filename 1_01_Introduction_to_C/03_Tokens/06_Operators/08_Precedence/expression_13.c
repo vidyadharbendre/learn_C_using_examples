@@ -26,6 +26,15 @@
     - The expression resolves to true || true, which evaluates to true.
     - The value true is assigned to the variable 'result'.
 
+    Version History:
+        Version 1.0 - [Date: 05-NOV-2024] - Initial version with instructions on 
+        using PythonTutor.com to visualize C programs on mobile.
+
+    Note:
+    You can write and visualize C programs on your mobile using Python Tutor at:
+    https://pythontutor.com
+
+
 */
 
 #include <stdio.h>
@@ -50,5 +59,48 @@ int main() {
 /*
 
 result is : 1
+
+# Initialize variables
+a = 11
+b = 6
+c = 0
+d = 7
+e = 5
+
+# Logical expression explanation incorporated in comments
+result = a + 2 > b and not c or a != d and a - 2 <= e  # Logical expression evaluation
+
+# Explanation of the Logical Expression:
+# 1. Break down the expression based on operator precedence:
+#    - 'and' has higher precedence than 'or', so we evaluate the 'and' parts first.
+
+# 2. Evaluating 'a + 2 > b':
+#    - a + 2 = 11 + 2 = 13
+#    - Check if 13 > 6: This is True.
+
+# 3. Evaluating '!c':
+#    - c is 0, and 'not c' (or '!c' in C) converts 0 to True.
+#    - So 'not c' is True.
+
+# 4. Now evaluate the first part: 'True and True':
+#    - This results in True.
+
+# 5. Next part: 'a != d':
+#    - Check if 11 != 7: This is True.
+
+# 6. Evaluating 'a - 2 <= e':
+#    - a - 2 = 11 - 2 = 9
+#    - Check if 9 <= 5: This is False.
+
+# 7. Now evaluate the second 'and': 'True and False':
+#    - This results in False.
+
+# 8. Combining with 'or':
+#    - We have: 'True or False'
+#    - Since 'or' returns True if at least one operand is True, the final result is True.
+
+# Print the result of the logical expression
+print("result is:", int(result))  # 'result is: 1' because True is equivalent to 1 in Python
+
 
 */

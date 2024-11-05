@@ -20,6 +20,15 @@
     Finally, the program prints the result to the console using the `printf` function.
 
     This simple demonstration provides insight into operator precedence in C programming, emphasizing how to compute arithmetic expressions based on the precedence rules.
+
+    Version History:
+        Version 1.0 - [Date: 05-NOV-2024] - Initial version with instructions on 
+        using PythonTutor.com to visualize C programs on mobile.
+
+    Note:
+    You can write and visualize C programs on your mobile using Python Tutor at:
+    https://pythontutor.com
+
 */
 
 #include <stdio.h>

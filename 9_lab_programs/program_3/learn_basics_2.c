@@ -7,3 +7,10 @@ int main() {
     printf("\n");
     return 0;
 }
+
+// The output of the above program is
+/*
+
+**********
+
+*/

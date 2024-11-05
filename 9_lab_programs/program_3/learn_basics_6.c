@@ -16,3 +16,15 @@ int main() {
     }
     return 0;
 }
+
+// The output of the above program is
+/*
+
+Enter number of rows: 5
+XXXX*
+XXX***
+XX*****
+X*******
+*********
+
+*/

@@ -9,3 +9,14 @@ int main() {
     }
     return 0;
 }
+
+// The output of the above program is
+/*
+
+*
+**
+***
+****
+*****
+
+*/

@@ -26,6 +26,7 @@
 int main() {
     // Declare variables to hold the sizes of each data type
     int size_int = (int)sizeof(int);
+    size_t size_t_int = sizeof(int);
     unsigned int size_unsigned_int = (unsigned int)sizeof(unsigned int);
     short size_short_int = (short)sizeof(short int);
     long size_long_int = (long)sizeof(long int);
@@ -37,6 +38,7 @@ int main() {
 
     // Display the sizes using printf
     printf("Size of int....................: %d bytes\n", size_int);
+    printf("Size of int with size_t........: %zu bytes\n", size_t_int);
     printf("Size of unsigned int...........: %u bytes\n", size_unsigned_int);
     printf("Size of short int..............: %hd bytes\n", size_short_int);
     printf("Size of long int...............: %ld bytes\n", size_long_int);
@@ -52,6 +54,7 @@ int main() {
 // Example Output:
 /*
 Size of int....................: 4 bytes
+Size of int with size_t........: 4 bytes
 Size of unsigned int...........: 4 bytes
 Size of short int..............: 2 bytes
 Size of long int...............: 8 bytes

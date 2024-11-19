@@ -70,3 +70,15 @@ void swapByReference(int *a, int *b) {
     *a = *b;
     *b = temp;
 }
+
+
+//The output of the above program is shown as below:
+/*
+Enter two numbers for swapping using global variables: 33 66
+Before swapping (Global Variables): num1 = 33, num2 = 66
+After swapping (Global Variables): num1 = 66, num2 = 33
+
+Enter two numbers for swapping using call by reference: 11 88
+Before swapping (Call by Reference): x = 11, y = 88
+After swapping (Call by Reference): x = 88, y = 11
+*/

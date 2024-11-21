@@ -44,3 +44,9 @@ Invalid input! Please try again.
 Enter a number between 1 and 10: 9
 Thank you! You entered a valid number: 9
 */
+
+/*
+Yes, you can use (number < 1 || number > 10) in the while loop condition instead of the && operator. The expression (number < 1 || number > 10) evaluates to true if the number is outside the valid range (less than 1 or greater than 10).
+
+
+*/

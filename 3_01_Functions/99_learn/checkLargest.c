@@ -56,11 +56,7 @@ void CheckLargest(int fnumber1, int fnumber2) {
     }
 }
 
-// The output of the above program is shown as below
 /*
-Enter the first number: 90
-Enter the second number: 3
-Entered first number is: 90
-Entered second number is: 3
-The given number 90 is the largest.
+ 
+
 */

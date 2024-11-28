@@ -1,25 +1,23 @@
-/* . 
+/*
+    Name of the Program: Local Variable Scope with 'auto' Storage Class
+    Author: Vidyadhar Bendre
+    Email: vidyadhar.bendre@gmail.com
 
-Author:
-Vidyadhar Bendre
+    Description: This program demonstrates the usage and scope of a local variable 'fnum' declared
+                 inside the function 'function()' with the 'auto' storage class.
+                 The variable 'fnum' is an 'auto' variable by default and is only accessible within
+                 the function it's declared in. Attempting to access 'fnum' outside of the function
+                 will result in a scope error as its visibility is limited to the function.
 
-Email:
-vidyadhar.bendre@gmail.com
+    Version History:
+        Version 1.0 - [Date: 2024-12-04] - Initial version for demonstrating variable scope
+        Version 1.1 - [Date: 2024-11-28] - Adjusted to match comment format
 
-Date:
-4th December, 2023
-
-Purpose: 
-Demonstrating the usage and scope of a local variable with the 'auto' storage class.
-
-Description: 
-This program illustrates the scope of a local variable 'fnum' declared inside the function 'function()'.
-
-The variable 'fnum' is an 'auto' variable by default and is only accessible within the function it's declared in.
-
-Attempting to access 'fnum' outside the 'function()' will result in a scope error as its visibility is limited to the function.
-
+    Note:
+    You can write and visualize C programs on your mobile using Python Tutor at:
+    https://pythontutor.com
 */
+
 #include <stdio.h>
 
 void function(); // Function prototype declaration

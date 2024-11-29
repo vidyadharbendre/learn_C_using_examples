@@ -24,8 +24,22 @@ float calculate_oil_top_up(float current_oil_level);
 void display_total(float grand_total);
 
 int main() {
-    // Variables for the current oil level, totals, and grand total
-    float current_oil_level, car_wash_total, oil_total, grand_total;
+    /*
+        Description:
+        The main function orchestrates the car servicing charge calculation.
+        It:
+        1. Prompts the user for the current oil level.
+        2. Calculates car wash charges using calculate_car_wash.
+        3. Calculates oil top-up charges using calculate_oil_top_up.
+        4. Computes the total amount to be paid.
+        5. Displays the grand total using display_total.
+    */
+    
+    // Variable declarations
+    float current_oil_level; // Input: Current oil level in ml
+    float car_wash_total;    // Output: Total cost of car wash
+    float oil_total;         // Output: Total cost of oil top-up
+    float grand_total;       // Output: Total amount to be paid
 
     // Prompt user for the current oil level in ml
     printf("Enter the current oil level in ml: ");
@@ -51,6 +65,12 @@ int main() {
         float: Total cost of car wash with tax.
 */
 float calculate_car_wash() {
+    /*
+        Description:
+        The function calculates the car wash charges by:
+        1. Using a base charge of Rs. 500.0.
+        2. Adding a 10% tax on the base charge.
+    */
     const float CAR_WASH_CHARGE = 500.0; // Base cost of car wash
     const float CAR_WASH_TAX = 0.10;     // Tax rate for car wash
     return CAR_WASH_CHARGE + (CAR_WASH_CHARGE * CAR_WASH_TAX);
@@ -67,6 +87,14 @@ float calculate_car_wash() {
         float: Total cost of the oil top-up with tax.
 */
 float calculate_oil_top_up(float current_oil_level) {
+    /*
+        Description:
+        The function calculates the oil top-up charges by:
+        1. Checking if the current oil level is less than 300 ml.
+        2. Calculating the top-up required to reach 300 ml.
+        3. Using Rs. 5 per ml for the base cost of the top-up.
+        4. Adding a 12.5% tax on the base cost.
+    */
     const float OIL_COST_PER_ML = 5.0;  // Cost per ml of oil in Rs.
     const float OIL_TAX = 0.125;        // Tax rate for oil
     float oil_top_up_needed = 0.0;      // Amount of oil needed for top-up
@@ -92,5 +120,25 @@ float calculate_oil_top_up(float current_oil_level) {
         void
 */
 void display_total(float grand_total) {
+    /*
+        Description:
+        The function displays the total amount formatted to:
+        - A width of 17 characters,
+        - 7 decimal places,
+        - A signed value (+ or -),
+        - Zeros padded to fill the width.
+    */
     printf("Total amount to be paid: %+010.7f\n", grand_total);
 }
+
+/*
+vidyadharbendre@Vidyadhars-MacBook-Pro program_4 % ./pgm4_2
+Enter the current oil level in ml: 250
+Total amount to be paid: +831.2500000
+vidyadharbendre@Vidyadhars-MacBook-Pro program_4 % ./pgm4_2
+Enter the current oil level in ml: 300
+Total amount to be paid: +550.0000000
+vidyadharbendre@Vidyadhars-MacBook-Pro program_4 % ./pgm4_2
+Enter the current oil level in ml: 100
+Total amount to be paid: +1675.0000000
+*/

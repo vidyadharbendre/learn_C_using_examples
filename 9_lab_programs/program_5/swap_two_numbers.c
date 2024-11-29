@@ -1,84 +1,85 @@
-/* 
-    Author: 
-    Vidyadhar Bendre
+/*
+    Name of the Program: Call by Value vs Call by Reference
+    Author: Vidyadhar Bendre
+    Email: vidyadhar.bendre@gmail.com
     
-    Email: 
-    vidyadhar.bendre@gmail.com
+    Description: This program demonstrates the difference between Call by Value 
+    and Call by Reference in C programming. The program performs a swap operation 
+    using both methods, showing how changes made in the function affect the original 
+    variables depending on the method used.
+
+    Call by Value:
+        - Passes a copy of the variables to the function.
+        - Changes made inside the function do not affect the original variables.
     
-    Date: 
-    November 19, 2024
-
-    Purpose:
-    This program demonstrates two methods to swap two numbers:
-    1. Using global variables and a function.
-    2. Using the call by reference concept (passing pointers to a function).
-
-    Description:
-    The program allows the user to:
-    - Swap numbers using global variables.
-    - Swap numbers by passing the address of variables to a function.
-    The results of both methods are displayed.
+    Call by Reference:
+        - Passes the memory addresses (pointers) of the variables to the function.
+        - Changes made inside the function directly affect the original variables.
 
     Version History:
-        Version 1.0 - [Date: 07-NOV-2024] - Demonstrated swapping using global variables and call by reference.
+        Version 1.1 - [Date: 2024-11-29] - Modified to accept inputs from the keyboard.
+
+    Note:
+    You can write and visualize C programs on your mobile using Python Tutor at:
+    https://pythontutor.com
 */
 
 #include <stdio.h>
 
-// Global variables
-int num1, num2;
-
-// Function prototype for swapping using global variables
-void swapGlobal();
-
-// Function prototype for swapping using call by reference
-void swapByReference(int *a, int *b);
-
-int main() {
-    // Input for global variables swapping
-    printf("Enter two numbers for swapping using global variables: ");
-    scanf("%d %d", &num1, &num2);
-    printf("Before swapping (Global Variables): num1 = %d, num2 = %d\n", num1, num2);
-    
-    // Call swapGlobal function
-    swapGlobal();
-    printf("After swapping (Global Variables): num1 = %d, num2 = %d\n", num1, num2);
-
-    // Input for call by reference swapping
-    int x, y;
-    printf("\nEnter two numbers for swapping using call by reference: ");
-    scanf("%d %d", &x, &y);
-    printf("Before swapping (Call by Reference): x = %d, y = %d\n", x, y);
-    
-    // Call swapByReference function
-    swapByReference(&x, &y);
-    printf("After swapping (Call by Reference): x = %d, y = %d\n", x, y);
-
-    return 0;
+// Function demonstrating Call by Value
+void swapByValue(int a, int b) {
+    int temp = a;
+    a = b;
+    b = temp;
+    printf("Inside swapByValue: a = %d, b = %d (Swapped inside function only)\n", a, b);
 }
 
-// Function definition to swap numbers using global variables
-void swapGlobal() {
-    int temp = num1;
-    num1 = num2;
-    num2 = temp;
-}
-
-// Function definition to swap numbers using call by reference
+// Function demonstrating Call by Reference
 void swapByReference(int *a, int *b) {
     int temp = *a;
     *a = *b;
     *b = temp;
+    printf("Inside swapByReference: a = %d, b = %d (Swapped in original variables)\n", *a, *b);
 }
 
+int main() {
+    int num1, num2;
 
-//The output of the above program is shown as below:
+    // Accepting input from the user
+    printf("Enter the first number: ");
+    scanf("%d", &num1);
+
+    printf("Enter the second number: ");
+    scanf("%d", &num2);
+
+    // Demonstrating Call by Value
+    printf("\nBefore swapByValue: num1 = %d, num2 = %d\n", num1, num2);
+    swapByValue(num1, num2);
+    printf("After swapByValue: num1 = %d, num2 = %d (Original values remain unchanged)\n\n", num1, num2);
+
+    // Demonstrating Call by Reference
+    printf("Before swapByReference: num1 = %d, num2 = %d\n", num1, num2);
+    swapByReference(&num1, &num2);
+    printf("After swapByReference: num1 = %d, num2 = %d (Original values are swapped)\n", num1, num2);
+
+    return 0;
+}
+
 /*
-Enter two numbers for swapping using global variables: 33 66
-Before swapping (Global Variables): num1 = 33, num2 = 66
-After swapping (Global Variables): num1 = 66, num2 = 33
+    Example Outputs:
 
-Enter two numbers for swapping using call by reference: 11 88
-Before swapping (Call by Reference): x = 11, y = 88
-After swapping (Call by Reference): x = 88, y = 11
+    Case 1: Demonstrating Call by Value
+    -----------------------------------
+    Enter the first number: 10
+    Enter the second number: 20
+
+    Before swapByValue: num1 = 10, num2 = 20
+    Inside swapByValue: a = 20, b = 10 (Values swapped inside function only)
+    After swapByValue: num1 = 10, num2 = 20 (Original values remain unchanged)
+
+    Case 2: Demonstrating Call by Reference
+    ---------------------------------------
+    Before swapByReference: num1 = 10, num2 = 20
+    Inside swapByReference: a = 20, b = 10 (Values swapped in original variables)
+    After swapByReference: num1 = 20, num2 = 10 (Original values are swapped)
 */

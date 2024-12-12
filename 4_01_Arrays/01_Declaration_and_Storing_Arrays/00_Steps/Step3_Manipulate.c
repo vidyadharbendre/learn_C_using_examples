@@ -109,3 +109,17 @@ void displayArray(int fnumbers[], int fsize){
     printf("\n");
     
 }
+
+// The output of the above program is shown as below:
+/*
+Second number: 20
+Fourth number: 40
+Initial array: 10 20 30 40 50 
+Modified array: 10 20 66 40 100 
+Print an Arry using function: 
+length[0] =  10
+length[1] =  20
+length[2] =  66
+length[3] =  40
+length[4] =  100
+*/

@@ -68,3 +68,8 @@ void printArray(int arr[], int size) {
         printf("%d ", arr[i]);
     }
 }
+
+// The output of the above program is:
+/*
+Array elements: 10 20 30 40 50 
+*/

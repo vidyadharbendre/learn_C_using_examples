@@ -1,14 +1,57 @@
+/*
+    Author:
+    Vidyadhar Bendre
+
+    Email:
+    vidyadhar.bendre@gmail.com
+
+    Date:
+    Version 1 - 09 December 2023
+    Version 2 - 12 December 2024
+
+    Purpose:
+    Declare, initialize, and access elements of a float array representing sensor readings
+
+    Description:
+    This program demonstrates the creation, initialization, and access of elements in a float array representing sensor readings. 
+    The array is declared with a maximum size to accommodate potential future readings. 
+    However, only a few initial sensor readings are stored in the array.
+
+    Steps:
+    1. **Declare and Initialize the Array:**
+        - `float sensorReadings[MAX_READINGS] = {23.5, 24.1, 22.8, 25.3};` declares a float array named `sensorReadings` with a maximum size of `MAX_READINGS` and initializes the first four elements with sensor readings.
+    2. **Access and Print Readings:**
+        - A `for` loop iterates through the array and prints the reading for each sensor, formatted with one decimal place.
+
+    **Key Point:**
+    - It's important to consider the actual number of elements in the array when iterating and printing to avoid accessing uninitialized or irrelevant elements. 
+    - In this case, we could introduce a variable to store the actual number of readings and use it in the loop condition.
+
+    **Python Equivalent:**
+    Python uses lists to represent arrays:
+    ```python
+    sensor_readings = [23.5, 24.1, 22.8, 25.3]
+
+    for i, reading in enumerate(sensor_readings):
+        print(f"Reading {i+1}: {reading:.1f}")
+    ```
+
+    **To visualize the execution step-by-step, you can use PythonTutor:**
+    - Visit https://pythontutor.com/visualize.html
+    - Paste the Python code and click "Visualize Execution"
+*/
+
 #include <stdio.h>
 
-#define MAX_READINGS 50 // Maximum number of sensor readings
+#define MAX_READINGS 50
 
 int main() {
-    float sensorReadings[MAX_READINGS] = {23.5, 24.1, 22.8, 25.3}; 
-    // Example sensor readings
-    
+    float sensorReadings[MAX_READINGS] = {23.5, 24.1, 22.8, 25.3};
+    int numReadings = 4; // Actual number of sensor readings
+
     // Accessing and printing sensor readings
     printf("Sensor Readings from IoT Devices:\n");
-    for (int i = 0; i < MAX_READINGS; ++i) {
+    for (int i = 0; i < numReadings; ++i) {
         printf("Reading %d: %.1f\n", i + 1, sensorReadings[i]);
     }
 
@@ -22,50 +65,4 @@ Reading 1: 23.5
 Reading 2: 24.1
 Reading 3: 22.8
 Reading 4: 25.3
-Reading 5: 0.0
-Reading 6: 0.0
-Reading 7: 0.0
-Reading 8: 0.0
-Reading 9: 0.0
-Reading 10: 0.0
-Reading 11: 0.0
-Reading 12: 0.0
-Reading 13: 0.0
-Reading 14: 0.0
-Reading 15: 0.0
-Reading 16: 0.0
-Reading 17: 0.0
-Reading 18: 0.0
-Reading 19: 0.0
-Reading 20: 0.0
-Reading 21: 0.0
-Reading 22: 0.0
-Reading 23: 0.0
-Reading 24: 0.0
-Reading 25: 0.0
-Reading 26: 0.0
-Reading 27: 0.0
-Reading 28: 0.0
-Reading 29: 0.0
-Reading 30: 0.0
-Reading 31: 0.0
-Reading 32: 0.0
-Reading 33: 0.0
-Reading 34: 0.0
-Reading 35: 0.0
-Reading 36: 0.0
-Reading 37: 0.0
-Reading 38: 0.0
-Reading 39: 0.0
-Reading 40: 0.0
-Reading 41: 0.0
-Reading 42: 0.0
-Reading 43: 0.0
-Reading 44: 0.0
-Reading 45: 0.0
-Reading 46: 0.0
-Reading 47: 0.0
-Reading 48: 0.0
-Reading 49: 0.0
-Reading 50: 0.0
 */

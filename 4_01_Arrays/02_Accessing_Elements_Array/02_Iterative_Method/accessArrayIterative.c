@@ -16,6 +16,10 @@ Description:
 - sizeof(arr[0]) gives the size of a single element (in this case, the first element of the array) in bytes.
 - sizeof(arr) / sizeof(arr[0]) calculates the number of elements in the array by dividing the total size of the array by the size of a single element.
 
+Note:
+You can visualize and step through the same program using tools like 
+**https://pythontutor.com/c.html#mode=edit** (C Visualization).
+
 */
 
 #include <stdio.h>
@@ -46,7 +50,7 @@ int main() {
 }
 
 // The output of the above program is:
-/* . 
+/*
 Using sizeof operator to calculate the length of the Array
 The size of the array is displayed in bytes: 20
 The size of the first element in bytes: 4

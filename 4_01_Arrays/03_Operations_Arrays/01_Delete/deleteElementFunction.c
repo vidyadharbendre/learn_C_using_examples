@@ -1,4 +1,4 @@
-/* . 
+/*
 Author:
 Vidyadhar Bendre
 
@@ -6,7 +6,8 @@ Email:
 vidyadhar.bendre@gmail.com
 
 Date:
-16 December 2023
+version 1 - 16 December 2023
+version 2 - 15 December 2023
 
 Purpose:
 The program serves as an interactive tool to perform various operations on an array, including displaying the array elements with their indices, obtaining the total length of the array, fetching an element at a specific index, deleting an element at a chosen index, and displaying the modified array after deletion.
@@ -24,18 +25,21 @@ Retrieve Element: Users specify an index to fetch a particular element from the 
 Delete Element: Users choose an index for deletion. The program deletes the element at the given index and displays the modified array without the deleted element.
 
 Output: The program outputs each step's result for better understanding and verification.
+
+Note: 
+To visualize the program execution step by step, you can use the PythonTutor website (https://pythontutor.com/). Although it's primarily designed for Python, it also supports visualization of C/C++ code. Paste your code there and step through the program to see how variables change and functions are called.
 */
+
 #include <stdio.h>
 
 #define MAX_SIZE 100
 
 // Function prototypes
-void displayArrayWithIndex(int arr[], int size);
+void displayArray(int arr[], int size);
 void getTotalLength(int size);
-void getArrayElements(int arr[], int size);
 void getElementAtIndex(int arr[], int size);
 int getIndexToDelete();
-void displayAfterDeletion(int arr[], int size, int indexToDelete);
+int deleteElement(int arr[], int size, int indexToDelete);
 
 int main() {
     int arr[MAX_SIZE];
@@ -44,27 +48,36 @@ int main() {
     printf("Enter the total length of the Array: ");
     scanf("%d", &size);
 
+    // Input array elements
     printf("Enter the array elements:\n");
     for (int i = 0; i < size; ++i) {
-        printf("Enter element %d: ", i+1);
+        printf("Enter element %d: ", i + 1);
         scanf("%d", &arr[i]);
     }
 
+    // Display total length
     getTotalLength(size);
 
+    // Display elements before deletion
+    displayArray(arr, size);
+
+    // Get element at a specific index
     getElementAtIndex(arr, size);
 
+    // Get the index to delete
     int indexToDelete = getIndexToDelete();
 
-    displayArrayWithIndex(arr, size);
+    // Delete the element and get the updated size
+    size = deleteElement(arr, size, indexToDelete);
 
-    displayAfterDeletion(arr, size, indexToDelete);
+    // Display elements after deletion
+    displayArray(arr, size);
 
     return 0;
 }
 
 // Function to display the array elements with their indices
-void displayArrayWithIndex(int arr[], int size) {
+void displayArray(int arr[], int size) {
     for (int i = 0; i < size; ++i) {
         printf("Index %d: %d\n", i, arr[i]);
     }
@@ -73,15 +86,6 @@ void displayArrayWithIndex(int arr[], int size) {
 // Function to display total length of the array
 void getTotalLength(int size) {
     printf("Total Length of the Array: %d\n", size);
-}
-
-// Function to get array elements
-void getArrayElements(int arr[], int size) {
-    printf("Array elements:\n");
-    for (int i = 0; i < size; ++i) {
-        printf("Enter element %d: ", i);
-        scanf("%d", &arr[i]);
-    }
 }
 
 // Function to get an element at a specific index in the array
@@ -104,35 +108,41 @@ int getIndexToDelete() {
     return index;
 }
 
-// Function to display the array elements without the deleted element
-void displayAfterDeletion(int arr[], int size, int indexToDelete) {
-    printf("Array after deletion at index %d: ", indexToDelete);
-    for (int i = 0; i < size; ++i) {
-        if (i != indexToDelete) {
-            printf("%d ", arr[i]);
+// Function to delete an element and shift the rest of the array
+// Returns the updated size after deletion
+int deleteElement(int arr[], int size, int indexToDelete) {
+    if (indexToDelete >= 0 && indexToDelete < size) {
+        for (int i = indexToDelete; i < size - 1; i++) {
+            arr[i] = arr[i + 1];
         }
+        printf("Element at index %d deleted successfully.\n", indexToDelete);
+        return size - 1;  // Decrease the size and return the updated size
+    } else {
+        printf("Invalid index for deletion.\n");
+        return size;  // If deletion fails, return the original size
     }
-    printf("\n");
 }
 
-// The output of the above program is shown below:
+// The output of the above program is shown as below:
 
-/*  
-Enter the total length of the Array: 5
+/*
+Enter the total length of the Array: 4
 Enter the array elements:
-Enter element 1: 09
-Enter element 2: 3
-Enter element 3: 12
-Enter element 4: 42
-Enter element 5: -9
-Total Length of the Array: 5
-Enter the index to get the element: 1
-Element at index 1: 3
-Enter the index to delete: 1
-Index 0: 9
-Index 1: 3
-Index 2: 12
-Index 3: 42
-Index 4: -9
-Array after deletion at index 1: 9 12 42 -9 
+Enter element 1: 4
+Enter element 2: 6
+Enter element 3: 2
+Enter element 4: 1
+Total Length of the Array: 4
+Index 0: 4
+Index 1: 6
+Index 2: 2
+Index 3: 1
+Enter the index to get the element: 0
+Element at index 0: 4
+Enter the index to delete: 0
+Element at index 0 deleted successfully.
+Index 0: 6
+Index 1: 2
+Index 2: 1
 */
+

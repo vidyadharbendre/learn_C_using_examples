@@ -32,8 +32,13 @@ Explanation:
    - Input for the array size happens in `main()`.
    - Functions are used for reading and displaying numbers to keep the code clean and modular.
 
-Note:
+Note 1:
 For compilers not supporting VLAs, use dynamic memory allocation (e.g., `malloc()`).
+
+Note 2:
+The program behavior may vary depending on the compiler. Tools like **https://pythontutor.com/c.html#mode=edit** can help you visualize and debug C programs interactively.
+
+
 */
 
 #include <stdio.h>

@@ -1,50 +1,122 @@
-#include <stdio.h>
+/*
+Author:
+Vidyadhar Bendre
 
-void user_defined_append(const char src1[], const char src2[], char dest[], int dest_max_length);
+Email:
+vidyadhar.bendre@gmail.com
+
+Date:
+01 January 2025
+
+Purpose:
+This program demonstrates string concatenation in C using:
+1. A user-defined function (`simple_append`) without using pointers.
+2. A user-defined function (`findStringLength`) to determine the length of strings.
+3. The standard library function `strcat` for comparison.
+
+Explanation:
+- The `simple_append` function concatenates two strings using array indices, ensuring no pointers are used.
+- The `findStringLength` function calculates the length of a string by iterating through its characters.
+- Two strings (`str1` and `str2`) are appended to a destination string (`dest`) separately using both methods.
+- The results of both methods are printed for comparison.
+
+Note:
+You can visualize this program's step-by-step execution using [pythontutor.com](https://pythontutor.com).
+*/
+
+#include <stdio.h>
+#include <string.h> // Ensure <string.h> is included for strcat
+
+// Function prototypes
+void simple_append(char dest[], char src[]);
+int findStringLength(char str[]);
 
 int main() {
-    char String1[] = "Hello";
-    char String2[] = "World";
-    char appended1[50] = ""; // To store String2 appended to String1
-    char appended2[50] = ""; // To store String1 appended to String2
+    char str1[] = "Hello";  // Source string 1
+    char str2[] = "World";  // Source string 2
+    char dest1[50] = "";    // Destination string for user-defined function
+    char dest2[50] = "";    // Destination string for library function
 
-    printf("Source string 1: %s\n", String1);
-    printf("Source string 2: %s\n", String2);
+    // Print original strings
+    printf("Source string 1: %s\n", str1);
+    printf("Source string 2: %s\n", str2);
 
-    user_defined_append(String1, String2, appended1, sizeof(appended1));
-    printf("String1 appended with String2: %s\n", appended1);
+    // Print string lengths using user-defined function
+    printf("Length of Source string 1: %d\n", findStringLength(str1));
+    printf("Length of Source string 2: %d\n", findStringLength(str2));
 
-    user_defined_append(String2, String1, appended2, sizeof(appended2));
-    printf("String2 appended with String1: %s\n", appended2);
+    // Using user-defined function to append
+    simple_append(dest1, str1);
+    simple_append(dest1, str2);
+
+    // Using library function strcat to append
+    strcat(dest2, str1); // Library-based appending
+    strcat(dest2, str2);
+
+    // Print the results
+    printf("\nAppended string using user-defined function: %s\n", dest1);
+    printf("Appended string using library function: %s\n", dest2);
 
     return 0;
 }
 
-// User-defined string appending function without using standard library functions
-void user_defined_append(const char src1[], const char src2[], char dest[], int dest_max_length) {
-    int i = 0, j = 0;
+/*
+Function: simple_append
+Purpose:
+- Concatenate one string to another without using pointers.
+- It appends characters from `src` to `dest` using array indices.
 
-    // Copy src1 to dest
-    while (src1[i] != '\0' && i < dest_max_length - 1) {
-        dest[i] = src1[i];
+Parameters:
+- dest: Destination string (char array) to which `src` is appended.
+- src: Source string (char array) to append to `dest`.
+
+Returns:
+- Modifies the `dest` array directly to include the appended `src` string.
+*/
+void simple_append(char dest[], char src[]) {
+    int dest_len = findStringLength(dest);  // Find length of destination string
+    int i = 0;  // Initialize index for src
+
+    // Append src to dest
+    while (src[i] != '\0') {
+        dest[dest_len] = src[i];
+        dest_len++;
         i++;
     }
-    dest[i] = '\0'; // Null-terminate the dest array
 
-    // Append src2 to dest
-    while (src2[j] != '\0' && i < dest_max_length - 1) {
-        dest[i] = src2[j];
-        i++;
-        j++;
-    }
-    dest[i] = '\0'; // Null-terminate the dest array
+    // Null-terminate the resulting string
+    dest[dest_len] = '\0';
 }
 
-// The output of the above program is shown as below
+/*
+Function: findStringLength
+Purpose:
+- Calculate the length of a given string by iterating through each character until the null terminator (`\0`) is reached.
 
+Parameters:
+- str: The input string (char array) whose length is to be calculated.
+
+Returns:
+- The length of the string as an integer.
+*/
+int findStringLength(char str[]) {
+    int length = 0;  // Initialize length to 0
+
+    // Iterate through the string until the null character is encountered
+    while (str[length] != '\0') {
+        length++;
+    }
+
+    return length;  // Return the calculated length
+}
+
+// The output of the above program is as follows:
 /*
 Source string 1: Hello
 Source string 2: World
-String1 appended with String2: HelloWorld
-String2 appended with String1: WorldHello
+Length of Source string 1: 5
+Length of Source string 2: 5
+
+Appended string using user-defined function: HelloWorld
+Appended string using library function: HelloWorld
 */

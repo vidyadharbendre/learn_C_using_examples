@@ -6,7 +6,8 @@ Email:
 vidyadhar.bendre@gmail.com
 
 Date:
-7th January 2024
+07 January 2024
+31 December 2024
 
 Purpose:
 This program demonstrates string appending without using pointers in C. It appends two strings to a destination string.

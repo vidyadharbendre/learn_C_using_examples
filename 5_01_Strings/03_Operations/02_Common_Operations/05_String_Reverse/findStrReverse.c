@@ -25,6 +25,7 @@ int findStringLength(char charArray[]);
 int main() {
     // Define the input string
     char inputString[] = "Vidyadhar";
+    char ReverseString[50]; // Create an array to store the reversed string
 
     // Print the original string
     printf("Original string is ...............: %s\n", inputString);
@@ -35,19 +36,16 @@ int main() {
     // Calculate and print string length using library function
     printf("Length using Library function is...: %lu\n", strlen(inputString));
 
-    // Reverse the string in place in the main program
+    // Reverse the string using the simplified method
     int length = findStringLength(inputString);  // Get the string length
-    int start = 0, end = length - 1;
-    while (start < end) {
-        char temp = inputString[start];
-        inputString[start] = inputString[end];
-        inputString[end] = temp;
-        start++;
-        end--;
+
+    for (int i = 0; i < length; i++) {
+        ReverseString[i] = inputString[length - 1 - i]; // Reverse the string
     }
+    ReverseString[length] = '\0';  // Null-terminate the reversed string
 
     // Print the reversed string
-    printf("Reversed string is .................: %s\n", inputString);
+    printf("Reversed string is .................: %s\n", ReverseString);
 
     return 0;  // Indicate successful program execution
 }

@@ -10,22 +10,24 @@ Date:
 31 December 2024
 
 Purpose:
-This program demonstrates string appending without using pointers in C. It appends two strings to a destination string.
+This program demonstrates string concatenation without using pointers in C. It concatenates two strings to a destination string.
 
 Explanation:
-- The program defines a user-defined function 'user_defined_append' to append one string to another without using pointers.
+- The program defines a user-defined function 'user_defined_concatenate' to concatenate two strings without using pointers.
 - Three strings, str1, str2, and dest, are initialized with "Hello", "World", and an empty string respectively.
-- The user-defined function 'user_defined_append' appends str1 to dest and then appends str2 to the resulting dest string.
-- The output displays the appended string.
+- The user-defined function 'user_defined_concatenate' concatenates str1 and str2 into the dest string.
+- The output displays the concatenated string.
 
 Note:
-- This implementation appends strings by manipulating character arrays directly, without using pointers.
+- This implementation concatenates strings by manipulating character arrays directly, without using pointers.
+- For better visualization of the code execution step-by-step, you can use [pythontutor.com](https://pythontutor.com/).
 */
 
 #include <stdio.h>
 #include <string.h>
 
-void user_defined_append(char dest[], int dest_max_length, const char src[]);
+// User-defined function to concatenate two strings without pointers
+void user_defined_concatenate(char dest[], const char src[]);
 
 int main() {
     char str1[] = "Hello";
@@ -35,29 +37,36 @@ int main() {
     printf("Source string 1: %s\n", str1);
     printf("Source string 2: %s\n", str2);
 
-    user_defined_append(dest, sizeof(dest), str1);
-    user_defined_append(dest, sizeof(dest), str2);
+    // Concatenate using user-defined function
+    user_defined_concatenate(dest, str1);
+    user_defined_concatenate(dest, str2);
 
-    printf("Appended string: %s\n", dest);
+    printf("Concatenated string (without strcat): %s\n", dest);
+
+    // Concatenate using strcat to compare
+    strcat(dest, str2);
+    printf("Concatenated string (using strcat): %s\n", dest);
 
     return 0;
 }
 
-// User-defined string appending function without pointers
-void user_defined_append(char dest[], int dest_max_length, const char src[]) {
-    int dest_len = strlen(dest);
+// User-defined string concatenation function without pointers
+void user_defined_concatenate(char dest[], const char src[]) {
+    int dest_len = strlen(dest); // Get the current length of the destination string
     int i;
 
-    for (i = 0; src[i] != '\0' && dest_len < dest_max_length - 1; i++, dest_len++) {
-        dest[dest_len] = src[i];
+    // Append each character from src to dest
+    for (i = 0; src[i] != '\0'; i++) {
+        dest[dest_len + i] = src[i]; // Add character from src to the end of dest
     }
 
-    dest[dest_len] = '\0'; // Null-terminate the appended string
+    dest[dest_len + i] = '\0'; // Null-terminate the concatenated string
 }
 
-// The output of the above program is shown below:
+// The Output of the program is shown as below:
 /*
 Source string 1: Hello
 Source string 2: World
-Appended string: HelloWorld
+Concatenated string (without strcat): HelloWorld
+Concatenated string (using strcat): HelloWorldWorld
 */

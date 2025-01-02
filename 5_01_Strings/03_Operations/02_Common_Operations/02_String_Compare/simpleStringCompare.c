@@ -92,24 +92,21 @@ Parameters:
 Returns:
 - 0 if the strings are equal, a non-zero value if they are not equal.
 */
+
 int findStrCmp(char str1[], char str2[]) {
-    int i = 0;
-    
-    // Compare each character of both strings
-    while (str1[i] != '\0' && str2[i] != '\0') {
+    int length = strlen(str1); // Assuming both strings are of the same length
+
+    // Compare characters up to the length of the strings
+    for (int i = 0; i < length; i++) {
         if (str1[i] != str2[i]) {
             return 1;  // Strings are not equal
         }
-        i++;
-    }
-
-    // If one string ends before the other, they're not equal
-    if (str1[i] != str2[i]) {
-        return 1;
     }
 
     return 0;  // Strings are equal
 }
+
+
 // The output of the above program is shown as below:
 /*
 Input string: Vidyadhar

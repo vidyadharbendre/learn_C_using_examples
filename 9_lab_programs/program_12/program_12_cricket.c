@@ -25,6 +25,13 @@ int main() {
     // Allocate memory for an array of structures
     struct Cricketer *cricketers = (struct Cricketer *)malloc(n * sizeof(struct Cricketer));
 
+    if(cricketers == NULL){
+        printf("Failed to allocate memory\n");
+        return 1;
+    }
+
+
+
     // Read cricketer information from the user
     for (int i = 0; i < n; ++i) {
         printf("\nEnter details for Cricketer %d:\n", i + 1);
@@ -53,3 +60,23 @@ int main() {
 
     return 0;
 }
+
+// The output of the above program is shown as below
+/*
+Enter details for Cricketer 2:
+Name: Poornima 
+Runs: 56
+Average: 4
+
+Cricketer Information:
+
+Details for Cricketer 1:
+Name: Vidyadhar
+Runs: 160
+Average: 48.00
+
+Details for Cricketer 2:
+Name: Poornima
+Runs: 56
+Average: 4.00
+*/

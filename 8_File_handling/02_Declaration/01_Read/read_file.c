@@ -10,7 +10,7 @@ int fprintf(FILE *stream, const char *format, ...);
 
 int main() {
     FILE *ptrtoFILE;
-    ptrtoFILE = fopen("example.txt", "w");
+    ptrtoFILE = fopen("example_1.txt", "w");
     if (ptrtoFILE == NULL) {
         printf("Error opening file");
         return 1;

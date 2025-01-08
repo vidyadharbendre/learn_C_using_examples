@@ -1,6 +1,40 @@
 #include <stdio.h>
 #include <string.h>
 
+/* -----------------------------------------------------------------
+   Structure Declaration and Usage Explanation:
+   
+   A structure (or struct) in C is a user-defined data type that allows 
+   grouping different data types under a single name. Structures are used 
+   to represent a collection of related data, such as the details of a 
+   student or employee.
+   
+   Syntax for Declaring a Structure:
+     struct StructureName {
+         data_type member1;
+         data_type member2;
+         data_type member3;
+         ... // More members can be added
+     };
+   
+   Example Structure Declaration:
+   
+     struct StudentRecord {
+         int rollNumber;    // Roll number of the student (integer type)
+         char name[50];     // Name of the student (string type)
+         char gender;       // Gender of the student (char type)
+         double fees;       // Fees of the student (double type)
+     };
+   
+   Structure members can be of any data type, and they can also contain 
+   arrays or other structures. Structures are useful for representing 
+   real-world entities with multiple attributes (such as students, books, etc.).
+   
+   To access a structure member, we use the dot operator (.) if we are 
+   working with a structure variable. If we have a pointer to a structure, 
+   we use the arrow operator (->).
+----------------------------------------------------------------- */
+
 // Definition of the StudentRecord structure
 struct StudentRecord {
     int rollNumber;      // Student Roll Number
@@ -42,7 +76,7 @@ int main() {
     return 0;
 }
 
-// The output of the above program is shown as below
+// The output of the above program is shown below:
 /*
 Student 1:
 Roll Number: 101

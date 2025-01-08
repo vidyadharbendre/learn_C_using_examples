@@ -1,6 +1,21 @@
 #include <stdio.h>
 #include <string.h> // Required for strcpy
 
+/* 
+Purpose:
+This program defines a structure 'StudentRecord' to store information about a student:
+- Roll Number (integer)
+- Name (string)
+- Fees (floating-point number)
+
+The program creates two instances of the 'StudentRecord' structure, initializes them with values
+(either directly or by setting each field individually), and then displays the details of the
+two students.
+
+The program demonstrates how to use structures, how to initialize them, and how to use
+functions like 'strcpy' to copy strings into character arrays.
+*/
+
 // Definition of the StudentRecord structure
 struct StudentRecord {
     int roll_no;       // Student Roll Number
@@ -11,12 +26,6 @@ struct StudentRecord {
 int main() {
     // Declare two separate instances of the StudentRecord structure
     struct StudentRecord s1, s2;
-
-// initilize it directly or record by record.
-/*
-    struct StudentRecord s1 = {1234, "Vidyadhar", 456.78};
-    struct StudentRecord s2 = {1235, "Poornima", 556.78};
-*/
 
     // Initialize the first student's details
     s1.roll_no = 1234;

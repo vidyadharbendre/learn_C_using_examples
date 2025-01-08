@@ -1,6 +1,44 @@
 #include <stdio.h>
 #include <string.h>
 
+/* -----------------------------------------------------------------
+   Structure Declaration and Usage Explanation:
+   
+   A **structure** is a user-defined data type in C that allows us to 
+   group different data types under one name, and it is commonly used 
+   to represent real-world entities like employees, customers, students, etc.
+   
+   **Syntax for Declaring a Structure:**
+     struct StructureName {
+         data_type member1;
+         data_type member2;
+         data_type member3;
+         ... // More members can be added as per requirement
+     };
+   
+   Example Structure Declaration:
+   
+     struct Customer {
+         int cust_id;          // Customer ID (integer type)
+         char name[50];        // Customer Name (string type)
+         char address[100];    // Customer Address (string type)
+         char phone_number[15];// Customer Phone Number (string type)
+         char dob[12];         // Customer Date of Birth (string type)
+     };
+   
+   Each member of the structure can have different data types, and it allows
+   combining various attributes of an entity in one cohesive unit. Structures 
+   can also be used to represent more complex data like arrays, pointers, and 
+   other structures.
+   
+   **Accessing Structure Members:**
+   To access structure members, we use the dot operator (`.`) with the structure 
+   variable. For example:
+     structure_variable.member_name;
+   
+   If working with pointers to structures, the arrow operator (`->`) is used.
+----------------------------------------------------------------- */
+
 // Definition of the Customer structure
 struct Customer {
     int cust_id;           // Customer ID
@@ -16,9 +54,9 @@ int main() {
 
     // Assigning values to attributes
     customer.cust_id = 201;
-    strcpy(customer.name, "Atharva Bendre");
-    strcpy(customer.address, "123 Main Street, Cityville");
-    strcpy(customer.phone_number, "+1234567890");
+    strcpy(customer.name, "Vidyadhar Bendre");
+    strcpy(customer.address, "Dhammanagi Sumo Leaves");
+    strcpy(customer.phone_number, "+123456789");
     strcpy(customer.dob, "1990-05-15");
 
     // Displaying information
@@ -32,12 +70,12 @@ int main() {
     return 0;
 }
 
-// The output of the above program is shown as below
+// The output of the above program is shown as below:
 /*
 Customer Information:
 Customer ID: 201
-Name: Atharva Bendre
-Address: 123 Main Street, Cityville
-Phone Number: +1234567890
+Name: Vidyadhar Bendre
+Address: Dhammanagi Sumo Leaves
+Phone Number: +123456789
 Date of Birth: 1990-05-15
 */

@@ -1,6 +1,25 @@
 #include <stdio.h>
 #include <string.h>
 
+/* 
+Purpose:
+This program demonstrates how to manage student records using structures in C.
+It defines a `Student` structure to hold information like roll number, name, marks, and grade of a student.
+The program initializes an array of student records, prints the initial data, and allows the user to search for a student by name.
+When a student is found, the program prints their marks.
+
+Explanation:
+1. We define a `Student` structure that holds four pieces of information:
+   - `rollNumber`: The unique roll number of the student (integer).
+   - `name`: The name of the student (character array of 50 characters).
+   - `marks`: The student's marks (float).
+   - `grade`: The student's grade (character).
+
+2. The `students` array is used to store the records of two students. Each student's record is populated with initial values for roll number, name, marks, and grade.
+
+3. The `printMarksByName` function allows the user to input a student's name and searches for the student in the array. If the student is found, their marks are printed. If not, a message indicating that the student is not found is displayed.
+*/
+
 // Structure to represent a student
 struct Student {
     int rollNumber;
@@ -9,6 +28,7 @@ struct Student {
     char grade;
 };
 
+// Function prototype declaration (This tells the compiler about the function)
 void printMarksByName(struct Student students[], int numStudents, const char *searchName);
 
 int main() {
@@ -63,3 +83,13 @@ void printMarksByName(struct Student students[], int numStudents, const char *se
         printf("Student with name '%s' not found.\n", searchName);
     }
 }
+
+// The output of the above program is shown as below:
+/*
+Initial Student Data:
+Roll Number: 1, Name: Vidyadhar Bendre, Marks: 85.50, Grade: A
+Roll Number: 2, Name: Shashikant Bendre, Marks: 76.80, Grade: B
+
+Enter the name of the student to search: Vidyadhar Bendre
+Marks for Vidyadhar Bendre: 85.50
+*/

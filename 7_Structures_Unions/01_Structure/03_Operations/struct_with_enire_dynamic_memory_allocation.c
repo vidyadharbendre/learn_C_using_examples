@@ -49,7 +49,10 @@ int main() {
     The malloc function is used to allocate memory to store `n` instances of `StudentRecord`.
     If memory allocation fails, an error message is displayed, and the program exits.
     */
-    struct StudentRecord *ptr_to_struct_records = (struct StudentRecord *)malloc(n * sizeof(struct StudentRecord));
+    struct StudentRecord *ptr_to_struct_records;  // Declare the pointer
+    ptr_to_struct_records = (struct StudentRecord *)malloc(n * sizeof(struct StudentRecord));  // Allocate memory
+
+
     if (ptr_to_struct_records == NULL) {
         printf("Memory allocation failed. Exiting...\n");
         return 1;  // Exit if memory allocation fails

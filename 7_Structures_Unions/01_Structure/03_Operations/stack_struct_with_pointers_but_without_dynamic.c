@@ -53,7 +53,8 @@ int main() {
     A pointer `ptr_to_struct_records` is initialized to point to the array of structures `SR`. 
     This pointer will be used to access and manipulate the student data in the array.
     */
-    struct StudentRecord *ptr_to_struct_records = SR;
+    struct StudentRecord *ptr_to_struct_records;  // Declare the pointer
+    ptr_to_struct_records = SR;                   // Assign the address of 'SR'
 
     /* 
     Step 4: Input student details.

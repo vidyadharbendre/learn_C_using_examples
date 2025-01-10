@@ -22,7 +22,6 @@ void readFile() {
 
 void writeFile() {
     FILE *file;
-    
     // Open file for writing
     file = fopen("example.txt", "w");
     if (file == NULL) {

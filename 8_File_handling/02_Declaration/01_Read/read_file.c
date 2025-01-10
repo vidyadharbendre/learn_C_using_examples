@@ -1,48 +1,50 @@
 #include <stdio.h>
 
 /*
+ * Purpose:
+ * This program demonstrates file operations in C: writing to a file using `fprintf`
+ * and then reading it back using `fgetc` to display its contents character by character.
 
-FILE *fopen(const char *filename, const char *mode);
-size_t fwrite(const void *ptr, size_t size, size_t nmemb, FILE *stream);
-int fprintf(FILE *stream, const char *format, ...);
-
-*/
+ * Description:
+ * 1. Open a file in write mode and write data using `fprintf`.
+ * 2. Close the file after writing.
+ * 3. Reopen the file in read mode and read its contents character by character using `fgetc`.
+ */
 
 int main() {
     FILE *ptrtoFILE;
+    char ch;
+
+    // Step 1: Write to the file
     ptrtoFILE = fopen("example_1.txt", "w");
     if (ptrtoFILE == NULL) {
-        printf("Error opening file");
+        printf("Error opening file for writing.\n");
         return 1;
     }
 
-    // Writing using fwrite
-    // const char data[] = "Hello, File!";
-    // fwrite(data, sizeof(char), sizeof(data), ptrtoFILE);
+    fprintf(ptrtoFILE, "Hello, File! This is a test.\nWelcome to file operations in C.");
+    fclose(ptrtoFILE);  // Close the file after writing
 
-    // Alternatively, writing using fprintf
-    fprintf(ptrtoFILE, "Hello, File!");
+    // Step 2: Read from the file
+    ptrtoFILE = fopen("example_1.txt", "r");
+    if (ptrtoFILE == NULL) {
+        printf("Error opening file for reading.\n");
+        return 1;
+    }
 
-    fclose(ptrtoFILE);
+    printf("\nReading contents from the file:\n");
+    while ((ch = fgetc(ptrtoFILE)) != EOF) {  // Read character by character
+        putchar(ch);  // Print each character to the console
+    }
+
+    fclose(ptrtoFILE);  // Close the file after reading
 
     return 0;
 }
 
-//Compile it using the following command
+// The output of the above program is shown as below
 /*
-gcc read_file.c -o read_file
-*/
-//Execute it
-/*
-./read_file
-*/
-
-//open the file using the command
-/*
-vi example.txt
-*/
-
-// quit using
-/*
-Escape q! 
+Reading contents from the file:
+Hello, File! This is a test.
+Welcome to file operations in C.% 
 */

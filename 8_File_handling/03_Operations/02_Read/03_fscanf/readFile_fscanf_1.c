@@ -4,13 +4,13 @@
 /*
  * Purpose:
  * This program demonstrates how to read and display the content of a file 
- * line by line using C file handling functions.
+ * using the `fscanf` function for formatted input in C.
 
  * Description:
  * 1. The program opens a file named "abc.txt" in read mode.
  * 2. It checks if the file was successfully opened. If not, it displays an error message and exits.
- * 3. The program uses `fgets()` to read strings (lines) from the file into a character array.
- * 4. Each line is printed to the console until the end of the file (EOF) is reached.
+ * 3. The program uses `fscanf()` to read strings from the file.
+ * 4. Each word (separated by whitespace) is printed to the console until the end of the file (EOF) is reached.
  * 5. Finally, the file is closed using `fclose()` to release resources.
  */
 
@@ -18,8 +18,8 @@ int main() {
     // Declare a file pointer
     FILE *ptrtoFILE;
 
-    // Declare a character array to store the read string
-    char str[80];
+    // Declare a character array to store the read word
+    char word[80];
 
     // Open the file "abc.txt" in read mode
     ptrtoFILE = fopen("abc.txt", "r");
@@ -29,10 +29,10 @@ int main() {
         printf("Error in opening!");  // Print an error message
         exit(1);  // Exit the program with an error code
     } else {
-        // Read strings from the file until the end-of-file is reached
-        while (fgets(str, sizeof(str), ptrtoFILE) != NULL) {
-            // Print the string
-            printf("%s", str);
+        // Read words from the file until the end-of-file is reached
+        while (fscanf(ptrtoFILE, "%s", word) != EOF) {
+            // Print the word
+            printf("%s\n", word);
         }
 
         // Close the file
@@ -41,9 +41,3 @@ int main() {
 
     return 0;
 }
-// The output of the above program is shown as below
-/*
-Bendre Atharva
-Akshara Bendre
-Vidyadhar Bendre
-*/
